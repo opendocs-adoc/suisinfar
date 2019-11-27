@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Sui Sin Far">
+<title>Chan Han Yen, Chinese Student</title>
+<style>
+/* Modified from https://github.com/edwardtufte/tufte-css */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tufte CSS styles */
+html {
+    font-size: 15px; 
+}
+
+body {
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12.5%;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background-color: #fffff8;
+    color: #111;
+    max-width: 1400px;
+    counter-reset: sidenote-counter; 
+}
+
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1; 
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1; 
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1; 
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1; 
+}
+
+.numeral {
+    font-family: et-book-roman-old-style; 
+}
+
+.danger {
+    color: red; 
+}
+
+article {
+    padding: 5rem 0rem; 
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+
+p,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem; 
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline; 
+}
+
+/* Chapter Epigraphs */
+div.epigraph {
+    margin: 5em 0; 
+}
+
+div.epigraph > blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em; 
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+    font-style: italic; 
+}
+
+div.epigraph > blockquote > footer {
+    font-style: normal; 
+}
+
+div.epigraph > blockquote > footer > cite {
+    font-style: italic; 
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+    font-size: 1.4rem; 
+}
+
+blockquote p {
+    width: 55%;
+    margin-right: 40px; 
+}
+
+blockquote footer {
+    width: 55%;
+    font-size: 1.1rem;
+    text-align: right; 
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 55%; 
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > ol,
+section > ul {
+    width: 50%;
+    -webkit-padding-start: 5%; 
+}
+
+li:not(:first-child) {
+    margin-top: 0.25rem; 
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0; 
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%; 
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%; 
+}
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+    color: inherit; 
+}
+
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+}
+
+a:link, .tufte-underline, .hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%; 
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    a:link, .tufte-underline, .hover-tufte-underline:hover {
+        background-position-y: 87%, 87%, 87%;
+    }
+}
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%; 
+}
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative; 
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter; 
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: et-book-roman-old-style;
+    position: relative;
+    vertical-align: baseline; 
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem; 
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 1rem;
+    top: -0.5rem; 
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left; 
+}
+
+div.fullwidth,
+table.fullwidth {
+    width: 100%; 
+}
+
+div.table-wrapper {
+    overflow-x: auto;
+    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; 
+}
+
+.sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing: .03em; 
+}
+
+code, pre > code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.0rem;
+    line-height: 1.42;
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+}
+
+.sans > code {
+    font-size: 1.2rem; 
+}
+
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em; 
+}
+
+.marginnote > code,
+.sidenote > code {
+    font-size: 1rem; 
+}
+
+pre > code {
+    font-size: 0.9rem;
+    width: 52.5%;
+    margin-left: 2.5%;
+    overflow-x: auto;
+    display: block;
+}
+
+pre.fullwidth > code {
+    width: 90%; 
+}
+
+.fullwidth {
+    max-width: 90%;
+    clear:both; 
+}
+
+span.newthought {
+    font-variant: small-caps;
+    font-size: 1.2em; 
+}
+
+input.margin-toggle {
+    display: none; 
+}
+
+label.sidenote-number {
+    display: inline; 
+}
+
+label.margin-toggle:not(.sidenote-number) {
+    display: none; 
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0; 
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+@media (max-width: 760px) {
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%; 
+    }
+    
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%; 
+    }
+    
+    pre > code {
+        width: 97%; 
+    }
+
+    section > ol {
+        width: 90%; 
+    }
+
+    section > ul {
+        width: 90%; 
+    }
+
+    figure {
+        max-width: 90%; 
+    }
+    
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none; 
+    }
+    
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em; 
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%; 
+    }
+    
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline; 
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none; 
+    }
+    
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative; 
+    }
+
+    label {
+        cursor: pointer; 
+    }
+
+    div.table-wrapper,
+    table {
+        width: 85%; 
+    }
+    
+    img {
+        width: 100%;
+    } 
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Chan Han Yen, Chinese Student</h1>
+<div class="details">
+<span id="author" class="author">Sui Sin Far</span><br>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+
+  .imageblock > .title {
+    text-align: inherit;
+  }
+  .details {
+    padding-bottom: 1.5em;
+  }
+  .publication-source {
+    color: #686868;
+  }
+  .author {
+    font-variant: small-caps;
+    font-size: 1.2em;
+  }
+  .py {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1rem;
+  }
+  .zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.9rem;
+  }
+  p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
+
+  hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 2em;
+    padding: 0;
+  }
+
+  .verseblock pre {
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    white-space: pre-wrap;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 760px) {
+    p, footer { width: 90%; }
+    pre.code { width: 87.5%; }
+    ul { width: 85%; }
+    .verseblock pre { max-width: 100% }
+    figure { max-width: 90%; }
+    figcaption, figure.fullwidth figcaption {
+      margin-right: 0%;
+      max-width: none;
+    }
+    blockquote p, blockquote footer { width: 90%; }
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+</style>
+</div>
+</div>
+<div class="sect1">
+<h2 id="page_462">I.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HE was Han Yen of the family of Chan, from the town of Choo-Chow<label for="sn-chan-choochow" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-chan-choochow" class="margin-toggle"><span class="sidenote">Choo-Chow: Possibly refers to <a href="https://en.wikipedia.org/wiki/Quzhou">Quzhou</a> (<span class="zh">衢州</span>, pinyin: <span class="py"><em>Qúzhōu</em></span>), which is in Zhejiang, not Jiangsu. Alternatively, this may refer to <a href="https://en.wikipedia.org/wiki/Xuzhou">Xuzhou</a> (<span class="zh">徐州</span>, pinyin: <span class="py"><em>Xúzhōu</em></span>, Cantonese: <em>Cheuijau</em>), which is in Jiangsu.</span>, in the Province of Kiangsoo<label for="sn-chan-kiangsoo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-chan-kiangsoo" class="margin-toggle"><span class="sidenote">Kiangsoo: <a href="https://en.wikipedia.org/wiki/Jiangsu_Province">Jiangsu Province</a> (<span class="zh">江蘇</span>, pinyin: <span class="py"><em>Jiāngsū</em></span>, formerly spelled <em>Kiangsu</em> or <em>Kiangsoo</em> as here), a coastal province in Eastern China.</span>. His father was a schoolmaster, so also had been his grandfather, and his great grandfather before him. He was chosen out of three sons to be the scholar of the family, and during his boyhood studied diligently and with ambition. From school to college he passed, and at the age of twenty, took successfully the examinations which entitled him to a western education at government expense.</p>
+</div>
+<div class="paragraph">
+<p>One of a band of Chinese youths he came to America and entered an American University. The new life and the new environment interested and exhilarated him. His most earnest desire was to absorb every good element of western education, so that he might be able to return to the Motherland well equipped to render her good service. He fully believed that he and his compatriot students were the destined future leaders of China, and his ambition to add lustre to the name of Chan, was almost holy.</p>
+</div>
+<div class="paragraph">
+<p>The American widow with whom he boarded described him to her friends and neighbors as the best of all Chinese students. “And you know,” she added with almost family pride, “the Chinese have the reputation of being the best students of all.”</p>
+</div>
+<div class="paragraph">
+<p>The widow, whose name was Mrs. Caroline Bray, had a daughter named Carrie. Carrie was a pretty girl of nineteen, with eyes and hair almost as dark<a id="page_463"></a> as the eyes and hair of the little girl who had been adopted by Han Yen’s parents to become his future wife. For seven months Carrie paid little attention to Han Yen. Her time was well occupied with housework, and in the evenings and Sundays, there was the Chinese Mission. Besides there were other students in the house.</p>
+</div>
+<div class="paragraph">
+<p>It was one evening in early spring. The other Chinese students were dining a member of the Legation at a Chinese restaurant in the city, and Han Yen, who was unacquainted with the official, was alone with Mrs. Bray and her daughter. Mrs. Bray had been talking cheerily during the meal and Carrie had occasionally joined in. When Han Yen finally arose and was about to ascend the stairs to his room, the girl looked up with a smile and bade him not study too hard.</p>
+</div>
+<div class="paragraph">
+<p>“What should I do with myself if I did not study?” asked Han Yen.</p>
+</div>
+<div class="paragraph">
+<p>“Well,” suggested Carrie brightly, “you might, for instance, come with me to the Chinese Mission sociable.”</p>
+</div>
+<div class="paragraph">
+<p>Han Yen had never before taken a walk with a young woman, but he had heard a paper read by a senior student, in which it had been stated that chatting with members of the fair sex, even though folly was their theme, should be part of the Chinese student’s American curriculum. So politely expressing his pleasure at being permitted to accompany Miss Carrie, the boy put on his hat and solemnly walked down the street beside her.</p>
+</div>
+<div class="paragraph">
+<p>Suddenly she began to laugh.</p>
+</div>
+<div class="paragraph">
+<p>“What is amusing you?” he enquired.</p>
+</div>
+<div class="paragraph">
+<p>“You walk too far away,” she replied, “one would think you were afraid of me.”</p>
+</div>
+<div class="paragraph">
+<p>Han Yen, blushing and embarrassed, but desirous above all things of conforming to what was right and proper according to western ideas, lessened the distance between him and his companion.</p>
+</div>
+<div class="paragraph">
+<p>The evening passed pleasantly if somewhat bewilderingly. On the way home the student learned from the youthful and self constituted missionary that through her instrumentality over one hundred Chinese boys had become acquainted with the English language and converted to Christianity.</p>
+</div>
+<div class="paragraph">
+<p>“In behalf of my countrymen in America, accept my heartfelt gratitude,” replied Han Yen.</p>
+</div>
+<div class="paragraph">
+<p>The next afternoon, he repeated to his cousin, Chan Han Fong, what Miss Carrie had told him, adding: “I feel ashamed that a young female should be able to do so much more than I for the cause of humanity.”</p>
+</div>
+<div class="paragraph">
+<p>Though to Han Yen, Confucianist, the Missions certainly did not appeal as Temples of Ethical Culture, he was well able to appreciate the fact that they were the only bright spots in the lives of his laboring compatriots, exiles from their own homes and families.</p>
+</div>
+<div class="paragraph">
+<p>After that evening Han Yen was invited occasionally to sit in the parlor of the widow Bray, where he listened to Carrie talking, playing, singing and otherwise entertaining her Chinese company. She was neither a clever nor well educated girl; but she was bright and attractive, and such as she was, dazzled the young student, to whom everything western, including women, was wonderful and worshipful.</p>
+</div>
+<div class="paragraph">
+<p>One evening Carrie and Han Yen were alone. The girl was playing some sentimental melodies. The boy felt very happy. He always did feel happy when he was alone with Carrie. it was different when the other students were present, and Carrie smiled, first at this one, and then at that. Han Yen had not analyzed the painful sensations which took possession of him whenever Carrie smiled or spoke in friendly or familiar fashion to another student. On one occasion, however, these feelings had so overpowered him that he had risen abruptly from his seat and left the room. “Where are you going, Mr. Chan?” Carrie had called after him, and with innocent rudeness, he had replied: “To where you are not.”</p>
+</div>
+<div class="paragraph">
+<p>Carrie had returned to the room, demure and smiling. She understood Chinese students much better than they understood her, learned though they were and simple though she was.</p>
+</div>
+<div class="paragraph">
+<p>This evening, for instance, she was fairly conscious of Han Yen’s state of mind, and as she was a good natured little thing, continued playing for him for<a id="page_464"></a> some time. Finally, she arose from the piano stool, and going over to the table on which stood a jar of hothouse flowers, took therefrom a piece of heliotrope.</p>
+</div>
+<div class="paragraph">
+<p>“It was awfully sweet of you, Mr. Chan,” said she, sniffing at the spray, “to bring me such beautiful flowers, and heliotrope is my favorite.”</p>
+</div>
+<div class="paragraph">
+<p>“It is very fragrant,” murmured Han Yen.</p>
+</div>
+<div class="paragraph">
+<p>“I had my fortune told yesterday,” said Carrie, standing before the old fashioned mirror and fastening the flower in her hair.</p>
+</div>
+<div class="paragraph">
+<p>“Was it a good one?” enquired the boy. Ordinarily he had no faith and little interest in mystical lore.</p>
+</div>
+<div class="paragraph">
+<p>“I don’t know,” replied the girl, “it was rather funny, though. I don’t think, Mr. Chan, that I shall tell you.”</p>
+</div>
+<div class="paragraph">
+<p>“I wish you would,” urged Han Yen earnestly.</p>
+</div>
+<div class="paragraph">
+<p>“Well, then, it was this: that my future husband would be a foreigner, and that he would bring me to-day a bouquet of flowers in which there would be one that was neither pink, yellow, green, blue nor red.”</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ii">II.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When Chan Han Fong learned that his cousin loved a woman of the white race, and was resolved to do as the American men do when they fall in love, his face became pallid.</p>
+</div>
+<div class="paragraph">
+<p>“What!” he cried, “you will relinquish your sacred ambition to work for China, dishonor your ancestors, disregard your parents’ wishes, and set at naught your betrothal to the daughter of Tien Wang – all for sake of a woman of alien blood?”</p>
+</div>
+<div class="paragraph">
+<p>“Yes,” declared Han Yen, his face shining, “love is more than all.”</p>
+</div>
+<div class="paragraph">
+<p>“You have gone mad,” cried Chan Han Fong, “think of the sorrow and disgrace which you will bring upon all to whom you are bound by the ties of relationship, gratitude and affection. Is a feeling which obliterates and destroys every virtuous thought and sentiment, worth cherishing?”</p>
+</div>
+<div class="paragraph">
+<p>“The feeling which possesses me,” replied Han Yen, “is divine.”</p>
+</div>
+<div class="paragraph">
+<p>Chan Han Fong stepped to his desk and took therefrom a paper: “Listen,” said he, “six months ago you wrote:</p>
+</div>
+<div class="verseblock">
+<pre class="content">Oh, China, misguided country!
+What would I not sacrifice,
+To see thee uphold thyself,
+Among the nations,
+For bitterer than death, ‘tis to know,
+That thou that wert more glorious than all,
+Now lieth as low as the lowest,
+Whilst the feet of those whom thou didst despise,
+Rest insolently upon thy limbs,
+The Middle Kingdom<label for="sn-chan-middle" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-chan-middle" class="margin-toggle"><span class="sidenote">The Middle Kingdom: This is a direct translation of the word for “China” in Chinese (<span class="zh">中國</span>, pinyin: <span class="py"><em>Zhōngguó</em></span>).</span> wert thou called,
+The country that Heaven loves,
+Thou wert the birthplace of the arts, the sciences,
+And all mankind blessing inventions,
+Thy princes rested in benevolence,
+Thy wise men were revered,
+Thy people happy.
+But now, the empire which is the oldest
+under the heavens is falling,
+And lesser nations stand ready to smite,
+The nation that first smote itself,
+Truly Mencius has said<label for="sn-chan-mencius" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-chan-mencius" class="margin-toggle"><span class="sidenote">This quote is from book Li Lou I of the classic text <a href="https://en.wikipedia.org/wiki/Mencius_(book)"><em>Mencius</em></a> by the philosopher Mencius, which talks about Jie (<span class="zh">桀</span>, pinyin: <span class="py"><em>Jié</em></span>, i.e., King Jie of Xia) and Zhou (<span class="zh">紂</span>, pinyin: <span class="py"><em>Zhòu</em></span>, i.e., King Zhou of Shang), both famous tyrants of early Chinese history. In James Legge’s (1875) translation: “Keeh and Chow’s losing the kingdom arose from their losing the people: and to lose the people means to lose their hearts.” (Original: <span class="zh">桀、紂之失天下也，失其民也</span>。<span class="zh">失其民者，失其心也</span>。)</span>:
+‘The loss of the empire comes through
+losing the hearts of the people.’
+The hearts of the people being lost,
+Who shall restore the Empire?”</pre>
+</div>
+<div class="paragraph">
+<p>Silence followed this declamation. Chan Han Yen’s face fell, bowed upon his hands.</p>
+</div>
+<div class="paragraph">
+<p>“Alas for China!” exclaimed Chan Han Fong, his own young eyes glowing with fateful fire. “When those who know how she can and must be saved – the very ones who could and should be her saviours – turn traitor to her.”</p>
+</div>
+<div class="paragraph">
+<p>The bowed head was lifted.</p>
+</div>
+<div class="paragraph">
+<p>“Oh, Fong,” plead Han Yen, “I can no more be as I have been. The aim and purpose of my existence has changed. And what is one student to China?”</p>
+</div>
+<div class="paragraph">
+<p>“Why are you here?” sternly demanded Chan Han Fong. Then, because his young cousin was dear to him, he went over to where the boy leaned, and laying his arm around his shoulder, pleaded with him thus:</p>
+</div>
+<div class="paragraph">
+<p>“See, my cousin! The flowers of the fields and of the woods and dales! Those of a kind come up together. The sister violet companions her brother. Only<a id="page_465"></a> through some mistake in the seeding is it otherwise. And the hybrid flower, though beautiful, is the saddest flower of all.”</p>
+</div>
+<div class="paragraph">
+<p>Han Yen trembled.</p>
+</div>
+<div class="paragraph">
+<p>At that moment a girl’s voice floated through the window.</p>
+</div>
+<div class="paragraph">
+<p>“Yen, Yen,” it called, “I want you to go into town with me.”</p>
+</div>
+<div class="paragraph">
+<p>Han Yen shook off his cousin’s detaining hand.</p>
+</div>
+<div class="paragraph">
+<p>“Pardon me,” said he, “but I must go.”</p>
+</div>
+<div class="paragraph">
+<p>“Ah!” soliloquized Chan Han Fong, gazing sadly after him. “A low caste American girl has disordered his mind.”</p>
+</div>
+<div class="paragraph">
+<p>The year before Han Yen had come to the University, Han Fong had been invited, with several other Chinese students, to spend an afternoon at the home of a wealthy and cultured maiden lady who lived on the other side of the river. This lady, who was white haired, soft voiced and comprehending, had entertained the Chinese youths in what to them, was a most delightful fashion. Han Fong had never forgotten that afternoon, nor one who had been a part of and in harmony with it – a young girl, almost a child in years, tall and slender, with thoughtful eyes and quiet ways. That young girl had not belittled the foreign students by flirting with and plying them with numerous personal questions; but Han Fong had taken note that she had listened with interest while their hostess charmed them to talk of their work and aspirations, and that the few remarks which she had made, were intelligent, and proved, that young though she was, she understood the purpose of their lives and sympathised with it.</p>
+</div>
+<div class="paragraph">
+<p>Because of that young girl, seen and heard but once, Chan Han Fong, called Carrie Bray, “low caste.”</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_iii">III.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Carrie had returned home tired out with a day’s watching by the bedside of a sick Chinese woman.</p>
+</div>
+<div class="paragraph">
+<p>“Why are you so good to everybody but yourself?” enquired Han Yen, meeting the girl as she entered the house in the dusk of the evening and following her into the sitting room.</p>
+</div>
+<div class="paragraph">
+<p>“I <em>am</em> good to myself,” answered Carrie cheerfully. “I’m accustomed to helping the poor Chinese. Indeed, I don’t know what I shall do with myself after I give them up for you, Yen.”</p>
+</div>
+<div class="paragraph">
+<p>“I shall not require you to give them up altogether,” replied the boy tenderly, “It is a work for humanity which you are doing and I hope to be able to help you with it.”</p>
+</div>
+<div class="paragraph">
+<p>“Why, dearie, what are you talking about?” exclaimed Carrie.</p>
+</div>
+<div class="paragraph">
+<p>“About – when we shall be happy.”</p>
+</div>
+<div class="paragraph">
+<p>“You mean – when we go to China.”</p>
+</div>
+<div class="paragraph">
+<p>“No – here. I cannot go back to China for many years – perhaps never.”</p>
+</div>
+<div class="paragraph">
+<p>“Why?”</p>
+</div>
+<div class="paragraph">
+<p>Carrie’s voice sounded sharp.</p>
+</div>
+<div class="paragraph">
+<p>“Because I must work for my living – and for yours,” answered the boy, “and if I were to return to China I would have to work for the government until I had repaid what I owed for my education here.”</p>
+</div>
+<div class="paragraph">
+<p>“Oh! Then you are not rich!”</p>
+</div>
+<div class="paragraph">
+<p>“Rich!” echoed Han Yen. “My father had to sell his land to enable me to complete my studies. Otherwise I would not have been able to compete at the Pekin examinations<label for="sn-chan-pekin" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-chan-pekin" class="margin-toggle"><span class="sidenote">The Pekin examinations: Most likely refers to the <a href="https://en.wikipedia.org/wiki/Imperial_examination">Imperial examinations</a> of the Qing Dynasty held in Beijing (formerly spelled <em>Peking</em> or <em>Pekin</em> as here). These were abolished in 1905, but a similar system was established in 1911 (one year before this story was published) during the Republican period.</span>.”</p>
+</div>
+<div class="paragraph">
+<p>“You always used to say that you were going back to China.”</p>
+</div>
+<div class="paragraph">
+<p>“Yes,” said Han Yen. “It was my great ambition to return to China and work for her – and alone I could have done so. But now, I shall not be alone – and I have a higher and loftier ambition than to work for China – it is to work for humanity – with you.”</p>
+</div>
+<div class="paragraph">
+<p>“I do not understand you,” gasped Carrie.</p>
+</div>
+<div class="paragraph">
+<p>“But you will,” said Han Yen. “Listen. I have yet to tell you how much I love you, and how all my heart is weeping and laughing for you. I am giving up all for you, to be with you, to work for you. I am not returning to my native land, because all my thought is you – and everything else is as naught.”</p>
+</div>
+<div class="paragraph">
+<p>The girl shrank before the rising emotion in the boy’s face and voice.</p>
+</div>
+<div class="paragraph">
+<p>“Good night, Yen, dear,” said she, her hand upon the door knob, “I am so tired that I can’t sit up one moment longer. See you to-morrow.”</p>
+</div>
+<div class="paragraph">
+<p>And then she stole away to the kitchen and said to her mother:<a id="page_466"></a></p>
+</div>
+<div class="paragraph">
+<p>“What do you think? Yen’s people are poor and after we are married, he will have to stay in America and live and work here just like a common Chinaman.”</p>
+</div>
+<div class="paragraph">
+<p>“Lands sakes!” ejaculated Mrs. Bray. “Ain’t that awful! And I’ve been telling all around that you was to marry a Chinese gentleman and was to go to China and live in great style!”</p>
+</div>
+<div class="paragraph">
+<p>“And he isn’t a Christian either,” murmured Carrie.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_iv">IV.</h2>
+<div class="sectionbody">
+<div class="verseblock">
+<pre class="content">“Dear Friend:
+
+Mother and I have been talking over things, and we have both decided that it would not be right for me to marry a man who is not a Christian. I am very sorry. I am going into town for a few days.
+
+Your affectionate friend,
+Carrie Bray.”</pre>
+</div>
+<div class="paragraph">
+<p>Chan Han Yen read the little note over many times. Finally he folded it, put it back into its envelope and slipped it under the rubber band which bound together a neat bundle of letters lying on his desk.</p>
+</div>
+<div class="paragraph">
+<p>Then he went out into the night. He did not know where he was going. All he knew was that the girl who had altered his life and driven everything else out of it, had cast him aside, because, oh, <em>not</em> because of the reason she had given. Chan Han Yen, Chinese student, was wiser than Carrie Bray in that respect.</p>
+</div>
+<div class="paragraph">
+<p>His rage and mortification, his distress was indescribable. As he walked along he clenched his hands so that his nails sunk into his soft palms and the blood trickled down. He was only twenty-one.</p>
+</div>
+<div class="paragraph">
+<p>Thus till morning dawned. The birds had begun to twitter when a turn in the road revealed a little hamlet lying in the semi-darkness of a valley. It was a peaceful scene and brought before the boy’s mind his own home so far away – the home that he had been willing to cut himself away from forever. It seemed to him that he could see his father and his mother, his brothers, and the sweet little adopted daughter of the family. Yes, all the dear people who had been so proud of him, and who, one and all, had made so many sacrifices that he, the scholar, the talented one, might travel far and bring back to the east the wisdom of the west. To him they had trusted and were trusting, to reflect honor and glory upon them and their country.</p>
+</div>
+<div class="paragraph">
+<p>And he! Chan Han Yen threw himself down upon the soft turf. All anger and passion were spent; but in their place what shame and abasement of spirit! The air was sweet with the scent of the earth; the leaves hung silently on the bushes near by. Chan Han Yen fell asleep.</p>
+</div>
+<div class="paragraph">
+<p>When he awoke the sun was well up. He turned his face to its brightness.</p>
+</div>
+<div class="paragraph">
+<p>“Good morning, benign friend,” said he, “the Lesson of the Woman is over.”</p>
+</div>
+<div class="paragraph publication-source">
+<p>— January 1912. <em>New England Magazine</em>, Vol. 45, No. 5, pp. 462-466.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

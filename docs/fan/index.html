@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Sui Sin Far">
+<title>An Autumn Fan</title>
+<style>
+/* Modified from https://github.com/edwardtufte/tufte-css */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tufte CSS styles */
+html {
+    font-size: 15px; 
+}
+
+body {
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12.5%;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background-color: #fffff8;
+    color: #111;
+    max-width: 1400px;
+    counter-reset: sidenote-counter; 
+}
+
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1; 
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1; 
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1; 
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1; 
+}
+
+.numeral {
+    font-family: et-book-roman-old-style; 
+}
+
+.danger {
+    color: red; 
+}
+
+article {
+    padding: 5rem 0rem; 
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+
+p,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem; 
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline; 
+}
+
+/* Chapter Epigraphs */
+div.epigraph {
+    margin: 5em 0; 
+}
+
+div.epigraph > blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em; 
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+    font-style: italic; 
+}
+
+div.epigraph > blockquote > footer {
+    font-style: normal; 
+}
+
+div.epigraph > blockquote > footer > cite {
+    font-style: italic; 
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+    font-size: 1.4rem; 
+}
+
+blockquote p {
+    width: 55%;
+    margin-right: 40px; 
+}
+
+blockquote footer {
+    width: 55%;
+    font-size: 1.1rem;
+    text-align: right; 
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 55%; 
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > ol,
+section > ul {
+    width: 50%;
+    -webkit-padding-start: 5%; 
+}
+
+li:not(:first-child) {
+    margin-top: 0.25rem; 
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0; 
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%; 
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%; 
+}
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+    color: inherit; 
+}
+
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+}
+
+a:link, .tufte-underline, .hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%; 
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    a:link, .tufte-underline, .hover-tufte-underline:hover {
+        background-position-y: 87%, 87%, 87%;
+    }
+}
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%; 
+}
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative; 
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter; 
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: et-book-roman-old-style;
+    position: relative;
+    vertical-align: baseline; 
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem; 
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 1rem;
+    top: -0.5rem; 
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left; 
+}
+
+div.fullwidth,
+table.fullwidth {
+    width: 100%; 
+}
+
+div.table-wrapper {
+    overflow-x: auto;
+    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; 
+}
+
+.sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing: .03em; 
+}
+
+code, pre > code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.0rem;
+    line-height: 1.42;
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+}
+
+.sans > code {
+    font-size: 1.2rem; 
+}
+
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em; 
+}
+
+.marginnote > code,
+.sidenote > code {
+    font-size: 1rem; 
+}
+
+pre > code {
+    font-size: 0.9rem;
+    width: 52.5%;
+    margin-left: 2.5%;
+    overflow-x: auto;
+    display: block;
+}
+
+pre.fullwidth > code {
+    width: 90%; 
+}
+
+.fullwidth {
+    max-width: 90%;
+    clear:both; 
+}
+
+span.newthought {
+    font-variant: small-caps;
+    font-size: 1.2em; 
+}
+
+input.margin-toggle {
+    display: none; 
+}
+
+label.sidenote-number {
+    display: inline; 
+}
+
+label.margin-toggle:not(.sidenote-number) {
+    display: none; 
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0; 
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+@media (max-width: 760px) {
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%; 
+    }
+    
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%; 
+    }
+    
+    pre > code {
+        width: 97%; 
+    }
+
+    section > ol {
+        width: 90%; 
+    }
+
+    section > ul {
+        width: 90%; 
+    }
+
+    figure {
+        max-width: 90%; 
+    }
+    
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none; 
+    }
+    
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em; 
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%; 
+    }
+    
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline; 
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none; 
+    }
+    
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative; 
+    }
+
+    label {
+        cursor: pointer; 
+    }
+
+    div.table-wrapper,
+    table {
+        width: 85%; 
+    }
+    
+    img {
+        width: 100%;
+    } 
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>An Autumn Fan</h1>
+<div class="details">
+<span id="author" class="author">Sui Sin Far</span><br>
+</div>
+</div>
+<div id="content">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+
+  .imageblock > .title {
+    text-align: inherit;
+  }
+  .details {
+    padding-bottom: 1.5em;
+  }
+  .publication-source {
+    color: #686868;
+  }
+  .author {
+    font-variant: small-caps;
+    font-size: 1.2em;
+  }
+  .py {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1rem;
+  }
+  .zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.9rem;
+  }
+  p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
+
+  hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 2em;
+    padding: 0;
+  }
+
+  .verseblock pre {
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    white-space: pre-wrap;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 760px) {
+    p, footer { width: 90%; }
+    pre.code { width: 87.5%; }
+    ul { width: 85%; }
+    .verseblock pre { max-width: 100% }
+    figure { max-width: 90%; }
+    figcaption, figure.fullwidth figcaption {
+      margin-right: 0%;
+      max-width: none;
+    }
+    blockquote p, blockquote footer { width: 90%; }
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+</style>
+<div id="page_700" class="paragraph">
+<p>For two weeks Ming Hoan was a guest in the house of Yen Chow, the father of Ah Leen, and because love grows very easily between a youth and a maid it came to pass that Ah Leen unconsciously yielded to Ming Hoan her heart and Ming Hoan as unconsciously yielded his to her. After the yielding they became conscious.</p>
+</div>
+<div class="paragraph">
+<p>When their tale was told to Yen Chow he was much disturbed, and vowed that he would not disgrace his house by giving his daughter to a youth whose parents had betrothed him to another.</p>
+</div>
+<div class="paragraph">
+<p>“How canst thou help it if thy daughter loves me and becomes my wife?” boldly answered Ming Hoan. “We are in America, and the fault, if fault there be, is not upon thy shoulders.”</p>
+</div>
+<div class="paragraph">
+<p>“True!” murmured the mother of Ah Leen, smiling upon her would-be-son-in-law. “America!” Yen Chow shook his head. “Land where a man knows no law save his own – where even a son of China forgets his ancestors and follows his human heart.”</p>
+</div>
+<div class="paragraph">
+<p>“Sir!” returned Ming Hoan, “when the human heart is linked to the divine, ought we not to follow thereafter?”</p>
+</div>
+<div class="paragraph">
+<p>There was much more said, but it all ended in the young people wedding – and parting. For that was Chow’s stern decree. Ming Hoan must face his parents and clear away the clouds of misunderstanding before he could take Ah Leen.</p>
+</div>
+<div class="paragraph">
+<p>And now Ming Hoan is gone and Ah Leen stands alone. Her mother enters the room. Ah Leen must have some tea. The wife of Yen Chow leads her daughter into the wide hall, where refreshments are laid. The usual ceremonies attendant upon a wedding, and which in the case of Ah Leen’s cousins, Ah Toy and Mai Gwi Far, had lasted over a week, were to be postponed until Ming Hoan’s return from China.</p>
+</div>
+<div class="paragraph">
+<p>Her mother congratulates her. Ming Hoan is good to behold, wise beyond his years and had seen the face of the world. His fortune is not large, but it will grow. Most comforting thought of all, there will be no mother-in-law to serve or obey<label for="sn-fan-mother" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-fan-mother" class="margin-toggle"><span class="sidenote">No mother-in-law to serve or obey: This refers to the traditional tension in relations between mother-in-law and daughter-in-law (<span class="zh">婆媳關係</span>, pinyin: <span class="py"><em>póxí guānxi</em></span>) in Chinese culture. Daughters-in-law would traditionally move in to live with their husband’s family, and were expected to obey their mothers-in-law.</span>. Ming Hoan’s home for many years to come will be in the great City of New York.</p>
+</div>
+<div class="paragraph">
+<p>See, there is Ah Chuen, the wife of the herb doctor, and Sien Tau, the mother of the president of the Water Lily Society<label for="sn-fan-waterlily" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-fan-waterlily" class="margin-toggle"><span class="sidenote">Water Lily Society: An alternate translation of the White Lotus Society (<span class="zh">白蓮教</span> pinyin: <span class="py"><em>Báiliánjiào</em></span>), a Qing Dynasty era religious sect that became a millenarian secret society.</span>. They are coming to wish her felicity. Mark the red paper they are scattering on the way. They are good-natured women, and even if their class is below that of the wife of Yen Chow, their gifts prove natural refinement. Thus Ah Leen’s mother.</p>
+</div>
+<div class="paragraph">
+<p>“Mother,” murmurs Ah Leen, “I beg that you will kindly excuse me to our friends.”</p>
+</div>
+<div class="paragraph">
+<p>She carries her tea to the veranda, and, seated in a bamboo rocker, muses on Ming Hoan. She is both happy and sad. Happy to be a bride, yet sad because alone.</p>
+</div>
+<div class="paragraph">
+<p>It had been a strange ceremony – that wedding. It is not customary, even in America, for a Chinese bride to remain under her father’s roof, and only because, in his bended arm, she had wept her tears away, could Ah Leen realize herself the wife of Ming Hoan.</p>
+</div>
+<div class="paragraph">
+<p>How beautiful the day! Above her a deep blue dome, paling as it descends to the sea. Around her curving, sloping hills, covered with a tender green; here and there patches of glowing, dazzling color – California flowers. It is springtime<a id="page_701"></a> – the springtime of the year. A little carol of joy escapes Ah Leen’s lips. It is good to love and be loved even if –</p>
+</div>
+<div class="paragraph">
+<p>What is that Lee A-Chuen is saying? “‘Tis a pity that Yen Chow should have sent the bridegroom away. Youth is youth and soon forgets. The sister of my mother writes me that the choice of his parents is the loveliest of all the lovely girls in the Provinces of the Rippling Rivers.” The day has suddenly darkened for Ah Leen.</p>
+</div>
+<div class="paragraph">
+<p>Five moons have gone by since Ming Hoan went over the sea, and no letter – no message – not even a word has come to his waiting bride. But it is whispered in all the Chinese merchants’ families that Ming Hoan, disregarding his first marriage, which, being unconsented to by his parents, could scarcely be considered binding, had taken to himself as wife in his own land Fi Shui, the daughter of his father’s friend.</p>
+</div>
+<div class="paragraph">
+<p>The cousins of Ah Leen regard her with pitying looks whilst they whisper among themselves, “An autumn fan<label for="sn-fan-fan" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-fan-fan" class="margin-toggle"><span class="sidenote">Autumn fan: A fan in autumn (<span class="zh">秋扇</span>, pinyin: <span class="py"><em>qiūshàn</em></span>) is no longer needed due to the cooler weather. Thus, by extension, an “outdated item that has fallen into disuse” or a “woman who has lost a man’s affection or interest”.</span>! An autumn fan!”</p>
+</div>
+<div class="paragraph">
+<p>Ah Leen meets them with a serene countenance. Her American friend suggests that she should obtain a divorce; that that is the only course open for a deserted wife who wishes to retain her self-respect.</p>
+</div>
+<div class="paragraph">
+<p>“A deserted wife!” echoes Ah Leen. “Ah, no; ‘twas my father who compelled him to leave me. And what has he done that I should divorce him? Men cannot live upon memories, and it is perfectly right and proper, since he has decided to remain in China, that he should take to himself another wife.”</p>
+</div>
+<div class="paragraph">
+<p>At the time of the year when the heavens weep, as the Chinese say, there comes news of the birth of a son to Ming Hoan.</p>
+</div>
+<div class="paragraph">
+<p>Again the American girl watches sympathetically the face of the first wife of the man to whom a son has been born by another woman. Sun Lin, wife of the Sam Yup<label for="sn-ishmael-samyup" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-samyup" class="margin-toggle"><span class="sidenote">Sam Yup: This refers to the Sam Yup Company (<span class="zh">三邑會館</span>, pinyin: <span class="py"><em>Sānyì huìguǎn</em></span>, Cantonese: <em>Saamyap wuigun</em>), one of the six companies that originally split from the Kong Chow Association in 1868. The name Sam Yup means “Three Cities”, and refers specifically to the three counties of Nanhai (<span class="zh">南海</span>, pinyin: <span class="py"><em>Nánhǎi</em></span>, Cantonese: <em>Naamhoi</em>, now a <a href="https://en.wikipedia.org/wiki/Nanhai_District">district of Foshan</a>, Panyu (<span class="zh">番禺</span>, pinyin: <span class="py"><em>Pānyú</em></span>, Cantonese: <em>Punyu</em>), and Shunde (<span class="zh">順德</span>, pinyin: <span class="py"><em>Shùndé</em></span>, Cantonese: <em>Seundak</em>) in Guangdong Province.</span> Chief, brings the news to the house of Yen Chow. It is sundown and the American girl is sitting on the porch with Ah Leen.</p>
+</div>
+<div class="paragraph">
+<p>“Joy!” cries Ah Leen. “My husband has a son!”</p>
+</div>
+<div class="paragraph">
+<p>And she herself, on red note paper, sends news of the event to those of her friends who have not yet heard of it. These notes are proudly signed: “Ming Ah Leen, First Wife of Ming Hoan.”</p>
+</div>
+<div class="paragraph">
+<p>The year rolls on. There comes to the house of Yen Chow a Chinese merchant of wealth and influence. His eyes dwell often upon Ah Leen. He whispers to her father. Yen Chow puffs his pipe and muses: Assuredly a great slight has been put upon his family. A divorce would show proper pride. It was not the Chinese way, but was not the old order passing away and the new order taking its place? Aye, even in China, the old country that had seemed as if it would ever remain old. He speaks to Ah Leen.</p>
+</div>
+<div class="paragraph">
+<p>“Nay, father, nay,” she returns. “Thou hadst the power to send my love away from me, but thou canst not compel me to hold out my arms to another.”</p>
+</div>
+<div class="paragraph">
+<p>“But,” protests her mother, “thy lover hath forgotten thee. Another hath borne him a child.”</p>
+</div>
+<div class="paragraph">
+<p>A flame rushes over Ah Leen’s face; then she becomes white as a water lily. She plucks a leaf of scented geranium, crushes it between her fingers and casts it away. The perfume clings to the hands she lays on her mother’s bosom.</p>
+</div>
+<div class="paragraph">
+<p>“Thus,” says she, “the fragrance of my crushed love will ever cling to Ming Hoan.”</p>
+</div>
+<div class="paragraph">
+<p>It is evening. The electric lights are shining through the vines. Out of the gloom beyond their radius comes a man. The American girl, seated in a quiet corner of the veranda, sees his face. It is eager and the eyes are full of love and fate. Then she sees Ah Leen. Tired of woman’s gossip, the girl has come to gaze upon the moon, hanging in the sky above her like a pale yellow pearl.</p>
+</div>
+<div class="paragraph">
+<p>There is a cry from the approaching man. It is echoed by the girl. In a moment she is leaning upon his breast.</p>
+</div>
+<div class="paragraph">
+<p>“Ah!” she cries, raising her head and looking into his eyes. “I knew that though another had bound you by human ties, to me you were linked by my love divine.”</p>
+</div>
+<div class="paragraph">
+<p><a id="page_702"></a>"Another! Human ties!" exclaims the young man. He exclaims without explaining&#8201;&#8212;&#8201;for the sins of parents must not be uncovered&#8201;&#8212;&#8201;why there has been silence between them for so long. Then he lifts her face to his and gently reproaches her. "Ah Leen, you have dwelt only upon your love for me. Did I not bid thee, 'Forget not to remember that I love thee!"</p>
+</div>
+<div class="paragraph">
+<p>The American girl steals away. The happy Ming Hoan is unaware that as she flits lightly by him and his bride she is repeating to herself his words, and hoping that it is not too late to send to someone a message of recall.</p>
+</div>
+<div class="paragraph publication-source">
+<p>— August 1910. <em>New England Magazine</em>, Vol. 42, pp. 700-702.</p>
+</div>
+</div>
+</body>
+</html>

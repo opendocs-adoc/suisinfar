@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Sui Sin Far">
+<title>A Chinese Ishmael</title>
+<style>
+/* Modified from https://github.com/edwardtufte/tufte-css */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tufte CSS styles */
+html {
+    font-size: 15px; 
+}
+
+body {
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12.5%;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background-color: #fffff8;
+    color: #111;
+    max-width: 1400px;
+    counter-reset: sidenote-counter; 
+}
+
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1; 
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1; 
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1; 
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1; 
+}
+
+.numeral {
+    font-family: et-book-roman-old-style; 
+}
+
+.danger {
+    color: red; 
+}
+
+article {
+    padding: 5rem 0rem; 
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+
+p,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem; 
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline; 
+}
+
+/* Chapter Epigraphs */
+div.epigraph {
+    margin: 5em 0; 
+}
+
+div.epigraph > blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em; 
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+    font-style: italic; 
+}
+
+div.epigraph > blockquote > footer {
+    font-style: normal; 
+}
+
+div.epigraph > blockquote > footer > cite {
+    font-style: italic; 
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+    font-size: 1.4rem; 
+}
+
+blockquote p {
+    width: 55%;
+    margin-right: 40px; 
+}
+
+blockquote footer {
+    width: 55%;
+    font-size: 1.1rem;
+    text-align: right; 
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 55%; 
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > ol,
+section > ul {
+    width: 50%;
+    -webkit-padding-start: 5%; 
+}
+
+li:not(:first-child) {
+    margin-top: 0.25rem; 
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0; 
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%; 
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%; 
+}
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+    color: inherit; 
+}
+
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+}
+
+a:link, .tufte-underline, .hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%; 
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    a:link, .tufte-underline, .hover-tufte-underline:hover {
+        background-position-y: 87%, 87%, 87%;
+    }
+}
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%; 
+}
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative; 
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter; 
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: et-book-roman-old-style;
+    position: relative;
+    vertical-align: baseline; 
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem; 
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 1rem;
+    top: -0.5rem; 
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left; 
+}
+
+div.fullwidth,
+table.fullwidth {
+    width: 100%; 
+}
+
+div.table-wrapper {
+    overflow-x: auto;
+    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; 
+}
+
+.sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing: .03em; 
+}
+
+code, pre > code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.0rem;
+    line-height: 1.42;
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+}
+
+.sans > code {
+    font-size: 1.2rem; 
+}
+
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em; 
+}
+
+.marginnote > code,
+.sidenote > code {
+    font-size: 1rem; 
+}
+
+pre > code {
+    font-size: 0.9rem;
+    width: 52.5%;
+    margin-left: 2.5%;
+    overflow-x: auto;
+    display: block;
+}
+
+pre.fullwidth > code {
+    width: 90%; 
+}
+
+.fullwidth {
+    max-width: 90%;
+    clear:both; 
+}
+
+span.newthought {
+    font-variant: small-caps;
+    font-size: 1.2em; 
+}
+
+input.margin-toggle {
+    display: none; 
+}
+
+label.sidenote-number {
+    display: inline; 
+}
+
+label.margin-toggle:not(.sidenote-number) {
+    display: none; 
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0; 
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+@media (max-width: 760px) {
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%; 
+    }
+    
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%; 
+    }
+    
+    pre > code {
+        width: 97%; 
+    }
+
+    section > ol {
+        width: 90%; 
+    }
+
+    section > ul {
+        width: 90%; 
+    }
+
+    figure {
+        max-width: 90%; 
+    }
+    
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none; 
+    }
+    
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em; 
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%; 
+    }
+    
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline; 
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none; 
+    }
+    
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative; 
+    }
+
+    label {
+        cursor: pointer; 
+    }
+
+    div.table-wrapper,
+    table {
+        width: 85%; 
+    }
+    
+    img {
+        width: 100%;
+    } 
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>A Chinese Ishmael</h1>
+<div class="details">
+<span id="author" class="author">Sui Sin Far</span><br>
+</div>
+</div>
+<div id="content">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+
+  .imageblock > .title {
+    text-align: inherit;
+  }
+  .details {
+    padding-bottom: 1.5em;
+  }
+  .publication-source {
+    color: #686868;
+  }
+  .author {
+    font-variant: small-caps;
+    font-size: 1.2em;
+  }
+  .py {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1rem;
+  }
+  .zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.9rem;
+  }
+  p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
+
+  hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 2em;
+    padding: 0;
+  }
+
+  .verseblock pre {
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    white-space: pre-wrap;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 760px) {
+    p, footer { width: 90%; }
+    pre.code { width: 87.5%; }
+    ul { width: 85%; }
+    .verseblock pre { max-width: 100% }
+    figure { max-width: 90%; }
+    figcaption, figure.fullwidth figcaption {
+      margin-right: 0%;
+      max-width: none;
+    }
+    blockquote p, blockquote footer { width: 90%; }
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+</style>
+<div class="paragraph">
+<p><label for="mn-ishmael-ishmael" class="margin-toggle"></label><input type="checkbox" id="mn-ishmael-ishmael" class="margin-toggle"><span class="marginnote">“Ishmael” in the title is a reference to <a href="https://en.wikipedia.org/wiki/Ishmael_(Moby-Dick)">the narrator</a> in Melville’s <a href="https://en.wikipedia.org/wiki/Moby-Dick">famous novel</a>. The connection, according to Hsuan L. Hsu (2010), is that Suisinfar’s story “explores issues of exile, despair, and suicide that resonate with <em>Moby-Dick</em>” (<em>Geography and the Production of Space in Nineteenth-Century American Literature</em>, Cambridge University Press)</span></p>
+</div>
+<div class="imageblock text-”center”">
+<div class="content">
+<img src="ishmael-1.jpg" alt="“A Celestial Juliet”">
+</div>
+<div class="title">A Celestial Juliet</div>
+</div>
+<div id="page_43" class="paragraph">
+<p>In the light of night, on the detached rocks near the Cliff House<label for="sn-ishmael-cliff" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-cliff" class="margin-toggle"><span class="sidenote">This refers to the third incarnation of the <a href="https://en.wikipedia.org/wiki/Cliff_House">Cliff House</a>, at the time a large Victorian Chateau that was located above a bluff near the ocean in San Francisco. It burned down in 1907, but was replaced and is now a restaurant.</span>, the sea-lions are clambering and growling; the waters of the Pacific are foaming around them, and their young, in the clefts of the rookeries, are drifting into dreamland on lullabies sung by the waves.</p>
+</div>
+<div class="paragraph">
+<p>Mark that great fellow ensconced on a rocky pedestal. Why does he roar so restlessly and complainingly? I wonder, if he could speak, if he would tell where Leih Tseih and Ku Yum lie. I almost fancy that he sees the lovers quiet and still under the waters.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Ku Yum leant over the balcony of the big lodging-house on Dupont Street<label for="sn-ishmael-dupont" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-dupont" class="margin-toggle"><span class="sidenote">A street running through San Francisco’s Chinatown. It was renamed <a href="https://en.wikipedia.org/wiki/Grant_Avenue">Grant Avenue</a> after an earthquake destroyed the city in 1906.</span>. She was very tired, for she was a delicate little thing and her tiny hands and feet were kept moving all day; her mistress had a heart like a razor and a tongue to match. Underneath the balcony there passed a young man, and as he went by, some spirit whispered in Ku Yum’s ear, “Let fall a Chinese lily.”</p>
+</div>
+<div class="paragraph">
+<p>Ku Yum obeyed the spirit, and the young man, whose name was Leih Tseih, raised his eyes, and seeing Ku Yum, loved her. The Chinese lily he lifted from the ground and carried it away in his sleeve. Thereafter every day, going backward and forward to his work, Leih Tseih passed under the balcony where he had first seen Ku Yum, but the maiden no longer leaned over the railing. She had grown shy, and contented herself with peeping out of the door of the upper room. At last Leih Tseih, who was beside himself with love, threw her a note wrapped around a stone. Ku Yum caught and demurely retired with it; but just as she was placing it in the sole of her shoe her mistress came behind her and twisted it out of her fingers.</p>
+</div>
+<div class="paragraph">
+<p>“You wicked, wicked thing!” cried the woman. “How dare you keep company with a bad man!”</p>
+</div>
+<div class="paragraph">
+<p>Poor little Ku Yum’s transparent face flushed.</p>
+</div>
+<div class="paragraph">
+<p>“If I am a wicked thing, a bad man is fit company for me,” she cried. “But he who wrote me that is a superior man.”</p>
+</div>
+<div class="paragraph">
+<p>At that her mistress fell to beating her with a little switch. Ku Yum screamed; but instead of receiving help, her mistress’s husband appeared and relieved his wife as switcher, having a stronger arm.</p>
+</div>
+<div class="paragraph">
+<p>There lived on the floor just below the Lee Chus, the owners of Ku Yum<label for="sn-ishmael-muitsai" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-muitsai" class="margin-toggle"><span class="sidenote">The character Ku Yum in this story is a <a href="https://en.wikipedia.org/wiki/Mui_tsai">mui tsai</a> (<span class="zh">妹仔</span>, Cantonese: <em>mui jai</em>), a young woman from a poor family sold as a child into indentured servitude as a domestic servant. Although technically illegal as a form of child slavery in the United States, the practice continued up until the 1930s.</span>, a woman who had compassion on the slave-girl. She too had seen Leih Tseih pass and the tossing up of the note, and had said to herself, “Now, there are a fine-looking young man and a pearl of a girl becoming acquainted. May they be happy!”</p>
+</div>
+<div class="paragraph">
+<p>So when Ku Yum’s screams rent the air, her heart swelled big with pity, and though she dared not interfere between mistress and maid, she resolved to watch for Leih Tseih and tell him what she knew concerning Ku Yum.</p>
+</div>
+<div class="paragraph">
+<p>When Leih Tseih learned what had befallen the girl of his heart for his sake, the blood rushed to his head, and he would have leapt up the stairs and carried Ku Yum away by force, but A-Chuen, the woman, restrained him, saying: “Be discreet, and I will assist you; be rash, and you will lose all.”</p>
+</div>
+<div class="paragraph">
+<p>“But,” demurred Leih Tseih, “if a man will not enter a tiger’s lair, how can he obtain her whelps?”<label for="sn-ishmael-tiger" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-tiger" class="margin-toggle"><span class="sidenote">“If a man will not enter a tiger’s lair, how can he obtain her whelps?”: A famous saying (<span class="zh">不入虎穴，焉得虎子</span>, pinyin: <span class="py"><em>búrù hǔxué, yāndé hǔzǐ</em></span>) dating back to the <a href="https://en.wikipedia.org/wiki/Ban_Chao">Eastern Han dynasty</a>, similar in meaning to the proverb “Nothing ventured, nothing gained”</span></p>
+</div>
+<div class="paragraph">
+<p>“By coaxing them out,” replied A-chuen.</p>
+</div>
+<div class="paragraph">
+<p>Then the woman and the young man conferred together, and it came to pass that when the stars were in the sky, Ku Yum, in a peach-colored blouse, a present from a cousin in China, stood with downcast eyes in A-Chuen’s sitting-room and listened to words from her lover. She could not be induced to look at Leih-Tseih, but he caught the shine of her eyes underneath the lids, and thought her as sweet as a li-chee<label for="sn-ishmael-lichee" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-lichee" class="margin-toggle"><span class="sidenote">Li-chee: i.e., a <a href="https://en.wikipedia.org/wiki/Lychee">lychee</a> (<span class="zh">荔枝</span>, pinyin: <span class="py"><em>lìzhī</em></span>, Cantonese: <em>laiji</em>), a type of tropical fruit often grown in southern China.</span>.</p>
+</div>
+<div class="paragraph">
+<p>“Dear child,” said A-Chuen, “do not tremble so; you are with friends.”</p>
+</div>
+<div class="paragraph">
+<p>Then Leih Tseih told how he had planned to remove her from the people <a id="page_44"></a>who had treated her so cruelly. A-Chuen, who had an old husband who loved her well enough to do all that she wished, would leave the house on Dupont Street and take a small house for herself. There Ku Yum should safely abide. Meanwhile, A-Chuen with amiable and flattering words, would induce the Lee Chus to allow Ku Yum to come to A-Chuen’s room to work some embroidery on garments for her husband’s store, thereby preventing Ku Yum from being abused.</p>
+</div>
+<div class="paragraph">
+<p>“You are very good and very kind,” responding Ku Yum. “But unless I am bought from the Lee Chus, I cannot leave them. I have heard them talking of an offer that Lum Choy has made for me. It is dollars and dollars, and before many moons go by I fear I shall be obliged to be his.”</p>
+</div>
+<div class="paragraph">
+<p>“Who is Lum Choy?” asked Leih Tseih, his face white with anger and surprise.</p>
+</div>
+<div class="paragraph">
+<p>“He is a very ugly man,” said Ku Yum, “and there is a scar right across his forehead. But he has made money, they say, in more ways than the way of labor.”</p>
+</div>
+<div class="paragraph">
+<p>“And you wish to be sold to him?” queried Leih Tseih jealously.</p>
+</div>
+<div class="paragraph">
+<p>“That I did not say,” replied Ku Yum, “but this I do say: I am only a slave, but still a Chinese maiden. He is a man who, wishing to curry favor with the white people, wears American clothes, and when it suits his convenience passes for a Japanese.”</p>
+</div>
+<div class="paragraph">
+<p>“Shame on him!” cried A-Chuen.</p>
+</div>
+<div class="paragraph">
+<p>“Kind friend,” said Leih Tseih to A-Chuen, “if you so please, I would speak to Ku Yum alone.”</p>
+</div>
+<div class="paragraph">
+<p>A-Chuen left the room, and Leih Tseih, seating himself beside Ku Yum said, “I would like to tell you of myself.”</p>
+</div>
+<div class="paragraph">
+<p>“What you like to tell, I like to hear,” replied Ku Yum.</p>
+</div>
+<div class="paragraph">
+<p>“Then, listen,” said Leih Tseih. “I am the son of a high mandarin<label for="sn-ishmael-mandarin" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-mandarin" class="margin-toggle"><span class="sidenote">High mandarin: Refers to a high-ranking imperial government official during the Qing Dynasty.</span>, but being possessed of a turbulent and unruly spirit I ran away from home in my eighteenth year and through the agency of the Six Companies<label for="sn-ishmael-six" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-six" class="margin-toggle"><span class="sidenote">The Six Companies (<span class="zh">六大公司</span>, pinyin: <span class="py"><em>liùdà gōngsī</em></span>, Cantonese: <em>lukdaai gungsi</em>), also known as the <a href="https://en.wikipedia.org/wiki/Chinese_Consolidated_Benevolent_Association">Chinese Consolidated Benevolent Association</a> (<span class="zh">中華會館</span>, pinyin: <span class="py"><em>Zhōnghuá huìguǎn</em></span>, Cantonese: <em>Jungwa wuigun</em>), were a group of community-based organizations representing the interests of Chinese immigrants in the US and Canada, that merged to form a single association in 1882 in San Francisco. The original organization was known as the Kong Chow Association, but in 1868 it split into six separate groups that operated independently until 1882. The six companies were Sam Yup, Kong Chow, Yan Wo, Yeung Wo, Ning Yeung, and Hap Wo (<span class="zh">三邑、岡州、人和、陽和、寧陽、合和</span>, pinyin: <span class="py"><em>Sānyì, Gāngzhōu, Rénhé, Yánghé, Níngyáng, Héhé</em></span>, Cantonese: <em>Saamyap, Gongjau, Yanwo, Yeungwo, Ningyeung, Hapwo</em>).</span> came to San Francisco. Here I obtained work, but the Gambling Cash Tiger<label for="sn-ishmael-gambling" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-gambling" class="margin-toggle"><span class="sidenote">Gambling Cash Tiger: May refer to Hu Ye (<span class="zh">虎爺</span>, pinyin: <span class="py"><em>Hǔ Yé</em></span>, Cantonese: <em>Fu Ye</em>), often depicted as the steed of the God of Wealth (<span class="zh">財神</span>, pinyin: <span class="py"><em>Cái Shén</em></span>, Cantonese: <em>Choi San</em>). Some gamblers may pray to Hu Ye before gambling, in the hopes that he will “bring them money in his teeth” (<span class="zh">虎爺咬錢來</span>, pinyin: <span class="py"><em>Hǔ Yé yǎo qián lái</em></span>).</span> had all of my thoughts, and it came to pass in the heat of a game, when I saw my adversary, the very Lum Choy you speak of, playing me false, that I struck at him with a knife and left him lying wounded. I escaped punishment and followed a sea-faring man’s life for several years. Then came shipwreck and drifting for days alone upon the mighty waters, and my soul at last was humbled; and one solemn night, when naught could be heard save the washing of the waves against the side of my small boat, I acknowledged with sorrow to the Parent of All that I indeed had wandered far from the path of virtue, and vowed, if my life were spared, to follow my conscience, – for I had indeed been the bad man your mistress called me.”</p>
+</div>
+<div class="paragraph">
+<p>“Good or bad,” cried little Ku Yum, “you are you and I am I.” And she patted his hand shyly to show that what she had heard had not changed her feelings. Then she added, “And now I vow I will never be Lum Choy’s, but ever yours, who have the grace of the well-born.”</p>
+</div>
+<div class="paragraph">
+<p>Leih smiled and exclaimed, “What a woman!” and declared that he loved every inch of her skin and the spirit that dwelt behind her eyes.</p>
+</div>
+<div class="paragraph">
+<p>“I was picked up by a sailing-vessel bound for San Francisco,” continued Leih Tseih, “and since returning to this city, I have conformed to virtue in every respect. I sought work and I obtained it. I have saved money – almost sufficient to pay to the Six Companies the amount of my indebtedness. It was with the object of relieving myself of that obligation that I saved. But now, my Ku Yum, that sum will take you and me together far away from here to another city on the other side of this world. What do you say?”</p>
+</div>
+<div class="paragraph">
+<p>Little Ku Yum shook her head. “I told my mistress,” said she, “that you were a superior man.”</p>
+</div>
+<div class="paragraph">
+<p>“So be it,” returned Leih Tseih, rebuked, “I will take the punishment I deserve, and after my debt has been paid will wait for you until I have made money enough to buy you.”</p>
+</div>
+<div class="paragraph">
+<p>“No; when you have paid your debt and are able to take me away, I will fly with you wherever and whenever you wish.”</p>
+</div>
+<div class="paragraph">
+<p>“Even though I steal you.”</p>
+</div>
+<div class="paragraph">
+<p>“That I will consider a righteous theft. Besides, the sooner you are out of this city <a id="page_46"></a>the better. Are you not afraid you may be recognized and thrown into prison?”</p>
+</div>
+<div class="paragraph">
+<p>“I am not afraid. Life on the ocean transformed me both inwardly and outwardly.”</p>
+</div>
+<div class="paragraph">
+<p>“That may be, but I fear for you now. Be careful, I pray you. If you meet Lum Choy there will be trouble; and should he become aware that you and I have met, he would be a bloodhound on your track.”</p>
+</div>
+<div class="paragraph">
+<p>“Well, for your sake I will watch and be cautious.”</p>
+</div>
+<div class="paragraph">
+<p>When A-Chuen reappeared, Leih Tseih said, “Kind woman, we have agreed when the proper time comes to seek another city where we can be united. Here there are laws to separate us, but none to bind.”</p>
+</div>
+<div class="paragraph">
+<p>Which was true; for how could Leih Tseih and Ku Yum ask either Chinese priest or American in San Francisco to make them man and wife?</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>“One might as well look for a pin at the bottom of the ocean,”<label for="sn-ishmael-pin" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-pin" class="margin-toggle"><span class="sidenote">To “look for a pin at the bottom of the ocean” is a common Chinese idiom (<span class="zh">海底撈針</span>, pinyin: <span class="py"><em>hǎidǐ lāozhēn</em></span>) similar in meaning to the expression “look for a needle in a haystack”.</span> growled Lum Choy.</p>
+</div>
+<div class="paragraph">
+<p>He spoke to the Lee Chus, who had been vainly searching for weeks for Ku Yum.</p>
+</div>
+<div class="paragraph">
+<p>“Well, it may be that she has given herself to the sea,” answered Lee Chu, who was not very bright.</p>
+</div>
+<div class="paragraph">
+<p>“Imbeciles!” was his wife’s quick rejoinder as she snapped her eyes at the men. “A girl with a new lover can always be found – by him.”</p>
+</div>
+<div class="paragraph">
+<p>“What do you mean?” asked Lum Choy.</p>
+</div>
+<div class="paragraph">
+<p>“Why, this: Ku Yum had a lover who passed here every day. It is to his embraces, not to those of cold water that Ku Yum has given herself. The shameful thing! If I had her here I would tear her eyes out.”</p>
+</div>
+<div class="paragraph">
+<p>Lum Choy’s face had become livid. “Do you know this man?” said he. “If so, I will trace her through him.”</p>
+</div>
+<div class="paragraph">
+<p>“I should know him were I to see him,” said Lee Chu’s wife, “but he has not passed for three or four weeks. I had the letter which he wrote to Ku Yum, but the girl stole it from me before she left.”</p>
+</div>
+<div class="paragraph">
+<p>“He will pass again,” replied Lum Choy. “Ku Yum is not here now, so he does not make this his way. But he must pass some time. Tell me the hour when he was wont to go by and I will watch day after day and never weary until I have run him down.”</p>
+</div>
+<div class="imageblock text-”center”">
+<div class="content">
+<img src="ishmael-2.jpg" alt="“The hour when he was wont to go by”">
+</div>
+<div class="title">”The hour when he was wont to go by”</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>The presidents of the Six Companies had met together in the council hall.</p>
+</div>
+<div class="paragraph">
+<p>The chief of the Sam Yups<label for="sn-ishmael-samyup" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-samyup" class="margin-toggle"><span class="sidenote">Sam Yup: This refers to the Sam Yup Company (<span class="zh">三邑會館</span>, pinyin: <span class="py"><em>Sānyì huìguǎn</em></span>, Cantonese: <em>Saamyap wuigun</em>), one of the six companies that originally split from the Kong Chow Association in 1868. The name Sam Yup means “Three Cities”, and refers specifically to the three counties of Nanhai (<span class="zh">南海</span>, pinyin: <span class="py"><em>Nánhǎi</em></span>, Cantonese: <em>Naamhoi</em>, now a <a href="https://en.wikipedia.org/wiki/Nanhai_District">district of Foshan</a>, Panyu (<span class="zh">番禺</span>, pinyin: <span class="py"><em>Pānyú</em></span>, Cantonese: <em>Punyu</em>), and Shunde (<span class="zh">順德</span>, pinyin: <span class="py"><em>Shùndé</em></span>, Cantonese: <em>Seundak</em>) in Guangdong Province.</span>, an imposing man with thought-refined features, was urging the advisability of expending a sum of money for the relief of some sick laborers, when a rapping was heard, followed by the entrance of the Six Companie’s secretary, who approached the aged chief of the Hop Wos<label for="sn-ishmael-hopwo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-hopwo" class="margin-toggle"><span class="sidenote">The “Hop Wos” refers to the Hop Wo Benevolent Association (<span class="zh">合和會館</span>, pinyin: <span class="py"><em>Héhé huìguǎn</em></span>, Cantonese: <em>Hapwo wuigun</em>), one of the six companies that originally split from the Kong Chow Company in 1868.</span> and whispered a few words in his ear.</p>
+</div>
+<div class="paragraph">
+<p>“You can admit him,” responded the old man. The secretary left the rooom, and in a few minutes returned with a repulsive-looking fellow whose forehead bore a huge scar. “This is Lum Choy,” announced the secretary.</p>
+</div>
+<div class="paragraph">
+<p>“Well, Lum Choy, what is your complaint?” inquired the Hop Wo chief.</p>
+</div>
+<div class="paragraph">
+<p>“My complaint,” said Lum Choy, in a high rasping voice, “is that living in this city is a man named Leih Tseih, who owes this honorable body the cost of his transportation from China to America, and as well sundry other taxes. His debt is of many years’ standing, yet he works as a free man and himself receives the good of every cent he earns. More than this, Leih Tseih is a fugitive criminal, having some five years ago assaulted a man with murderous intent and escaped the consequences of his crime. I, Lum Choy, am the man he assaulted, and bear on my forehead the mark of his knife. I also complain that this Leih Tseih has abducted a slave girl named Ku Yum, or rather, stolen her from one Lee Chu, and that he has secreted her in a house on Stockton Street<label for="sn-ishmael-stockton" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-stockton" class="margin-toggle"><span class="sidenote"><a href="https://en.wikipedia.org/wiki/Stockton_Street">Stockton Street</a> is the main street running through <a href="https://en.wikipedia.org/wiki/Chinatown,_San_Francisco">Chinatown</a> in San Francisco.</span>, to which I can lead you. And I petition that you engage officers of the law to capture this lawless man, and that you prosecute him, as it is in order for the Six Companies so to do.”</p>
+</div>
+<div class="paragraph">
+<p>There were a few seconds of silence after Lum Choy had finished speaking; then the Sam Yup chief arose. He regarded gravely the mean figure of Lum Choy, and said: “Presidents of the Yeong Wo<label for="sn-ishmael-yeungwo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-yeungwo" class="margin-toggle"><span class="sidenote">“Yeong Wo” refers to the Yeung Wo Association (<span class="zh">陽和會館</span>, pinyin: <span class="py"><em>Yánghé huìguǎn</em></span>, Cantonese: <em>Yeungwo wuigun</em>), one of the six companies that originally split from the Kong Chow Company in 1868.</span>, Kong Chow<label for="sn-ishmael-kongchow" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-kongchow" class="margin-toggle"><span class="sidenote">The Kong Chow Association (<span class="zh">岡州會館</span>, pinyin: <span class="py"><em>Gāngzhōu huìguǎn</em></span>, Cantonese: <em>Gongjau wuigun</em>), the original community association that split into six separate companies in 1868.</span>, Yan Wo<label for="sn-ishmael-yanwo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-yanwo" class="margin-toggle"><span class="sidenote">“Yan Wo” refers to the Yan Wo Association (<span class="zh">人和會館</span>, pinyin: <span class="py"><em>Rénhé huìguǎn</em></span>, Cantonese: <em>Yanwo wuigun</em>), one of the six companies that originally split from the Kong Chow Company in 1868.</span>, Hop Wo and Ning Yeong<label for="sn-ishmael-ningyeung" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ishmael-ningyeung" class="margin-toggle"><span class="sidenote">The “Ning Yeongs” refers to the Ning Yeung Association (<span class="zh">寧陽會館</span>, pinyin: <span class="py"><em>Níngyáng huìguǎn</em></span>, Cantonese: <em>Ningyeung wuigun</em>), one of the six companies that originally split from the Kong Chow Company in 1868.</span> Societies, you may remember that <a id="page_47"></a>less than one month ago I delivered over to the Six Companies’ Fund a sum of money, which, as I then stated, had been paid to me by one of our delinquent immigrants, whose name I had been requested by him to withhold. You did not press me to reveal that name, but the time has come to do so. The man who paid me that money was Leih Tseih, and the amount, as shown in our books, covers the whole of his indebtedness. We, therefore, have no legal claim against Leih Tseih, and are not authorized to punish him for the deeds which Lum Choy has charged him with.”</p>
+</div>
+<div class="paragraph">
+<p>Lum Choy could not restrain himself. “What!” he cried, “the powerful Six Companies have no jurisdiction over the men they brought into this country?”</p>
+</div>
+<div class="paragraph">
+<p>“In some cases we have,” replied the Hop Wo chief suavely; “but this case lies with the American courts. Although so many years have elapsed since Leih Tseih assaulted you, I believe you still have recourse against him, and as you are one of our men, we will certainly do what we can to assist you in avenging yourself according to law.”</p>
+</div>
+<div class="paragraph">
+<p>“But the slave girl, Ku Yum?”</p>
+</div>
+<div class="paragraph">
+<p>“Are you interested in her?” queried the Sam Yup.</p>
+</div>
+<div class="paragraph">
+<p>“I am,” returned Lum Choy. “I have paid a large sum for her, which Lee Chu will not refund, and it was on the day that she was to come to me that she fled with Leih Tseih. In my search for her I discovered the man, and I have <a id="page_48"></a>made no mistake, for day after day, night after night, I have dogged his footsteps.”</p>
+</div>
+<div class="paragraph">
+<p>The chief of the Ning Yeongs then said: “Lum Choy has suffered grievous wrongs, and we must do all in our power to assist him in bringing his wronger to justice; but the purchase of slave-girls, which is just and right in our own country, is not lawful in America. Therefore, the task of recovering Ku Yum cannot be undertaken by the Six Companies. It must be intrusted to the hands of private parties and conducted secretly. Otherwise Lum Choy and Lee Chu will have as much to answer for, according to the law of this country, as had Leih Tseih.”</p>
+</div>
+<div class="paragraph">
+<p>“And,” rejoined the Sam Yup president, “that being so, I would advise Lum Choy to let matters rest. He who strives for a woman makes much trouble for himself. Besides, is it not better to forgive an injury than to avenge one?”</p>
+</div>
+<div class="paragraph">
+<p>“Great and noble are your sentiments, benevolent Sam Yup chief,” broke in Lum Choy, with a scarcely concealed sneer; “but they are not the sentiments of a man who has been injured as I have been, and I will have vengeance if it costs me my life.”</p>
+</div>
+<div class="paragraph">
+<p>With these words be left the council-room. Desire for a woman, hate for a man, had changed the nature of the once shrewd and clear-headed Lum Choy, and his mind was fired with one idea – vengeance.</p>
+</div>
+<div class="paragraph">
+<p>“If,” meditated he in the darkness of midnight, “I imprison Leih Tseih for a few months, perhaps a year, Ku Yum will be his at the end of that time and love him more than ever. If I use secret means to obtain Ku Yum, and do obtain her, the sweetness of the fruit will not be for me, for her mind and heart will be with my rival. If I kill Leih Tseih, Ku Yum’s spirit will follow his, for that is the way with women who dare what she has dared. What, then can I do to satisfy myself and draw Ku Yum’s heart from Leih Tseih? This only – kill Lum Choy and make Leih Tseih his murderer. Oho! devils, I shall soon be one of you! And now I must arrange so that he shall be the last person with me. I know where I can obtain a knife of his, and I know how I can lure him here. He will be overjoyed with my offer to relinquish my claim on Ku Yum for a small tax on his weekly wages, and while he is pouring out his gratitude to me for abandoning my vengeance, I will dabble him well with blood from a cut arm; He must come here in the dusk of the evening and immediately after his departure the deed will be done. Ha, ha! what a revenge!”</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Your eyes are strange; there is blood on your garments!” cried Ku Yum to Leih Tseih, who without warning had appeared before her.</p>
+</div>
+<div class="paragraph">
+<p>Leih Tseih’s set face relaxed.</p>
+</div>
+<div class="paragraph">
+<p>“Be not afraid, my bird,” said he: “but tonight you and I must part.”</p>
+</div>
+<div class="paragraph">
+<p>“Part! O, no, no!” She sprang to his side and caught his hand.</p>
+</div>
+<div class="paragraph">
+<p>“It is true. I am hunted again. Lum Choy has been found dead with a knife in his heart. I was the last person seen to enter his room: And as you see, my garments are blood-stained.”</p>
+</div>
+<div class="paragraph">
+<p>For a second the girl shrunk back; then, alas for the lost soul of Lum Cloy, pressed closer to her lover and whispered in his ear, “If all men save Leih Tseih were killed by Leih Tseih, still would Ku Yum remain with Leih Tseih.”</p>
+</div>
+<div class="paragraph">
+<p>“I am unworthy,” murmured Leih Tseih, brokenly. “Though I am guiltless of the deed for which I know they will condemn me, yet my past has been such that it justifies the condemnation. But you, O sweetest heart! You must forget me!”</p>
+</div>
+<div class="paragraph">
+<p>Ku Yum shook her head. “I can die. but I cannot do what you have asked of me.”</p>
+</div>
+<div class="paragraph">
+<p>Some silent seconds, then Leih Tseih said in a clear voice, “We will die together – you and I.”</p>
+</div>
+<div class="paragraph">
+<p>“Ah! that will be happiness – to enter the spirit-land, hand in hand. When my cousins in China hear of it they will say, ‘How fine! Our cousin, Ku Yum, who was a slave-girl on earth, walks the Halls of Death with the son of a high mandarin.’”</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>To the cliff they sped. Arrived where from a parapet they could leap into the Pacific, they embraced tenderly and were gone. None can point to the spot where life with all its troubles ended, for their <a id="page_49"></a>bodies were never found; but in that part of San Francisco called the City of the Chinese it is whispered from lip to ear that the spirits of Leih Tseih and Ku Yum have passed into a pair of beautiful sea-lions who wander in the moonlight over the rocks, meditating on life and love and sorrow.</p>
+</div>
+<div class="paragraph publication-source">
+<p>— July 1899. <em>The Overland Monthly</em>, Vol. 34, No. 199, pp. 43-49.</p>
+</div>
+</div>
+</body>
+</html>

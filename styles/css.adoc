@@ -1,0 +1,69 @@
+++++
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+
+  .imageblock > .title {
+    text-align: inherit;
+  }
+  .details {
+    padding-bottom: 1.5em;
+  }
+  .publication-source {
+    color: #686868;
+  }
+  .author {
+    font-variant: small-caps;
+    font-size: 1.2em;
+  }
+  .py {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1rem;
+  }
+  .zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.9rem;
+  }
+  p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
+
+  hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 2em;
+    padding: 0;
+  }
+
+  .verseblock pre {
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    white-space: pre-wrap;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 760px) {
+    p, footer { width: 90%; }
+    pre.code { width: 87.5%; }
+    ul { width: 85%; }
+    .verseblock pre { max-width: 100% }
+    figure { max-width: 90%; }
+    figcaption, figure.fullwidth figcaption {
+      margin-right: 0%;
+      max-width: none;
+    }
+    blockquote p, blockquote footer { width: 90%; }
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+</style>
+++++

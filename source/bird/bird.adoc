@@ -1,0 +1,175 @@
+= The Bird of Love
+Sui Sin Far
+:date: September 1910
+:publication: New England Magazine
+:location: Boston
+:volumenum: Vol. 43
+:pages: 25-27
+:stylesheet: ../../styles/tufte.css
+:nofooter:
+
+include::../../styles/css.adoc[]
+include::../../notes/notes.adoc[]
+
+[[page_25]]
+== I
+
+They were two young people with heads hot enough and hearts true enough to believe that the world was well lost for love, and they were Chinese.
+
+They sat beneath the shade of a cluster of tall young pines forming a perfect bower of greenness and coolness on the slope of Strawberry hill. Their eyes were looking oceanwards, following a ship nearing the misty horizon. Very loving yet very serious were their faces and voices. That ship, sailing from west to east, carried from each a message to his and her kin -- a message which humbly but firmly set forth that they were resolved to act upon their belief and to establish a home in the new country, where they would ever pray for blessings upon the heads of those who could not see as they could see nor hear as they could hear.
+
+"My mother will weep when she reads," sighed the girl.
+
+"Pau Tsu," the young man asked, "Do you repent?"
+
+"No," she replied, "But --"
+
+She drew from her sleeve a letter written on silk paper.
+
+The young man ran his eye over the closely penciled characters.
+
+"'Tis very much in its tenor like what my father wrote to me," he commented.
+
+"Not that."
+
+Pau Tsu indicated with the tip of her pink forefinger a paragraph which read:
+
+[verse]
+____
+"Are you not ashamed to confess that you love a youth who is not yet your husband? Such disgraceful boldness will surely bring upon your head the punishment you deserve. Before twelve moons go by, you will be an Autumn Fan."
+____
+
+The young man folded the missive and returned it to the girl whose face was averted from his.
+
+"Our parents," said he, "knew not love in its springing and growing, its bud and blossom. Let us, therefore, respectfully read their angry letters, but heed them not. Shall I not love you dearer and more faithfully because you became mine at my own request and not at my father's? And Pau Tsu, be not ashamed."
+
+The girl lifted radiant eyes.
+
+"Listen," said she, "When you, during your vacation went on that long journey to New York, to beguile the time I wrote a play. My heroine is very sad, for the one she loves is far away and she is much tormented by enemies. They would make her ashamed of her love. But this is what she replies to one cruel taunt:
+
+[verse]
+____
+When Memory sees his face and hears his voice
+The Bird of Love within my heart sings sweetly
+So sweetly, and so clear and jubilant,
+That my little Home Bird, Sorrow,
+Hides its head under its wing,
+And appeareth as if dead.
+
+Shame! Ah, speak not that word to one who loves,
+For loving, all my noblest, tenderest feelings are awakened,
+And I become too great to be ashamed."
+____
+
+"You do love me then, eh Pau Tsu?" queried the young man.
+
+"If it is not love, what is it?" softly answered the girl.
+
+Happily chatting they descended the green hill. Their holiday was over. A little later Liu Venti was on the ferry boat which leaves every half hour for the western shore, bound for the Berkeley Hills, opposite the Golden Gate, and Pau [[page_26]]Tsu was in her room at the San Francisco Seminary, where her father's ambition to make her the equal in learning of the son of Liu Jusong, had pleased her.
+
+== II
+
+"I was a little fellow of just about their age when my mother first taught me to kow-tow to my father and run to greet him when he came into the house," said Liu Venti, speaking of the twins who were playing on the lawn.
+
+"Dear husband!" replied Pau Tsu, "you are thinking of home -- even as I. This morning I thought I heard my mother's voice, calling to me as I have so often heard her on sunny mornings in the Province of the Happy River. She would flutter her fan at me in a way which was all her own. And my father. Oh, my kind old father!"
+
+"Aye," responded Liu Venti, "our parents loved us!"
+
+"Let us go home," said Pau Tsu after a while.
+
+Liu Venti started. Pau Tsu's words echoed the wish of his own heart. But he was not as bold as she.
+
+"How can we?" he asked. "Have not our parents sworn that they will never forgive us?"
+
+"The light within me today," replied Pau Tsu, "reveals that our parents sorrow because they have thus sworn. Liu Venti, ought we not to make our parents happy, even if we have to do so against their will?"
+
+"I would that we could," replied Liu Venti, "but there is to be overcome your father's hatred for my father and my father's hatred for yours."
+
+A shadow crossed Pau Tsu's face; but only for a moment. It lifted as she softly said: "Love is stronger than hate."
+
+Little Waking Eyes ran up and clambered upon his father's knee.
+
+"Me too," cried Little Sleeping Eyes, following him. With chubby fists he pushed his brother aside and mounted his father also.
+
+Pau Tsu looked across at her husband and sons.
+
+"The homes of our parents," said she, "are empty of the voices of little ones."
+
+Three moons later, Liu Venti and Pau Tsu, with mingled sorrow and hope in their hearts, bade good bye to their little sons and sent them across the sea, offerings of love to parents of whom both son and daughter remembered nothing but love and kindness, yet from whom that son and daughter were estranged by a poisonous thing called Hate.
+
+== III
+
+Two little boys were playing together on a beach. One gazed across the sea with wondering eyes. A thought had come -- a memory. "Where is father and mother?" he asked, turning to his brother. The other little boy gazed bewildered back at him and echoed: "Where is father and mother?"
+
+Then the two little fellows sat down in the sand and began to talk to one another in a queer little old fashioned way of their own. Their little mouths drooped pathetically; they propped their chubby little faces in their hands and heaved queer little sighs.
+
+There was father and mother one time -- always, always; father and mother and Sung Sung. Then there was the big ship and Sung Sung only, and the big water. After the big water, grandfathers and grandmothers, and Little Waking Eyes had gone to live with one grandfather and grandmother and Little Sleeping Eyes had gone to live with another grandfather and grandmother. And Little Waking Eyes and Little Sleeping Eyes had been good and had not cried at all. Had not father and mother said that grandfathers and grandmothers were just the same as fathers and mothers?
+
+"Just the same as fathers and mothers," repeated Little Waking Eyes to Little Sleeping Eyes, and Little Sleeping Eyes nodded his head and solemnly repeated: "Just the same as fathers and mothers."
+
+Then all of a sudden Little Waking Eyes stood up, rubbed his fists into his eyes and shouted: "I want my father and mother, I want my father and mother!" And Little Sleeping Eyes stood up and cried out strong and bold: "Let us go seek them. Let us go seek."
+
+[[page_27]]
+== IV
+
+So it happened that when the two new Sung Sungs who had been having their fortunes told by an itinerant fortune teller some distance down the beach, returned to where they had left their young charges, they found them not, and much perturbed, rent the air with their cries. Where could the children have gone? The beach was a lonely one, several miles from the seaport city where lived the grandparents of the children. Behind the beach, the bare land rose for a little way back up the sides and across hills to meet a forest dark and dense.
+
+Said one Sung Sung to another, looking towards this forest: "One might as well search for a pin at the bottom of the ocean as search for the children there. Besides, it is haunted with evil spirits."
+
+"A-ya, A-ya, A-ya!" cried the other, "Oh, what will my master and mistress say if I return home without Little Sleeping Eyes who is the golden plum of their hearts."
+
+"And what will my master and mistress do to me if I enter their presence without Little Waking Eyes. I verily believe that the sun shines for them only when he is around."
+
+For over an hour the two distracted servants walked up and down the beach, calling the names of their little charges; but there was no response.
+
+== V
+
+Under the quiet stars they met -- the two old men who had quarrelled in student days, and who ever since had cultivated hate for each other. The cause of their quarrel had long since been forgotten; but in the fertile soil of minds irrigated with the belief that the superior man hates long and well, the seed of hate had germinated and flourished. Was it not because of that hate that their children were exiles from the homes of their fathers -- those children who had met in a foreign land, and in spite of their fathers' hatred, had linked themselves in love.
+
+They spread their fans before their faces, each pretending not to see the other, while their servants enquired, "What news of the honorable little ones?"
+
+"No news," came the answer from either side.
+
+The old men pondered sadly and silently. Finally Liu Jusong said to his servants: "I will search in the forest."
+
+"So also will I," announced Li Wang.
+
+Liu Jusong lowered his fan. For the first time in many years, he allowed his eyes to rest on the countenance of his old college friend, and that one time friend returned his glance. But the servant men shuddered:
+
+"It is the haunted forest," they cried. "Oh, honorable masters, venture not amongst evil spirits!"
+
+But old Li Wang laughed them to scorn as also did Liu Jusong.
+
+"Give me a lantern," bade Li Wang, "I will search alone. Thy grandson is my grandson and mine is thine."
+
+"Aye," responded Li Wang.
+
+And love being stronger than hate, the two old men entered the forest together, searched for their children together and found them together.
+
+== VI
+
+"How many moons, Liu Venti, since our little ones went from us?" sighed Pau Tsu.
+
+She was pale and sad and in her eyes was a yearning expression that had not been always there.
+
+"Nearly five," returned Liu Venti.
+
+"Sometimes," said Pau Tsu, "I feel I cannot any longer bear their absence."
+
+She took from her bosom two little shoes, one red, one blue.
+
+"Their first," said she. "Oh, my sons, my little sons!"
+
+"Now, dear wife," said Liu Venti, "you must not grieve like that. The little ones are happy and all will some day be well."
+
+A messenger boy approached, handed Liu Venti a message and slipped away.
+
+Liu Venti read:
+
+[verse, role=text-right]
+____
+"May the bamboo ever wave. Son and daughter, return to your parents and your children."
+
+Liu Jusong,
+Li Wang.
+____

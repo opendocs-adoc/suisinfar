@@ -1,0 +1,45 @@
+extends: default
+image:
+  align: center
+caption:
+  align: center
+thematic-break:
+  border-color: #BEBEBE
+font:
+  catalog:
+    # Noto Serif supports Latin, Latin-1 Supplement, Latin Extended-A, Greek, Cyrillic, Vietnamese & an assortment of symbols
+    Noto Serif:
+      normal: notoserif-regular-subset.ttf
+      bold: notoserif-bold-subset.ttf
+      italic: NotoSerif-Italic.ttf
+      bold_italic: notoserif-bold_italic-subset.ttf
+    # M+ 1mn supports ASCII and the circled numbers used for conums
+    M+ 1mn:
+      normal: mplus1mn-regular-subset.ttf
+      bold: mplus1mn-bold-subset.ttf
+      italic: mplus1mn-italic-subset.ttf
+      bold_italic: mplus1mn-bold_italic-subset.ttf
+    SourceHanSerifTW:
+      normal: SourceHanSerifTW-Regular.ttf
+      bold: SourceHanSerifTW-Regular.ttf
+      italic: NotoSerif-Italic.ttf
+      bold_italic: SourceHanSerifTW-Regular.ttf
+  fallbacks:
+    - SourceHanSerifTW
+footnotes:
+  font_size: 10
+base:
+  font-size: 12
+header:
+  text-transform: uppercase
+  recto:
+    center:
+      content: '{author}'
+  verso:
+    center:
+      content: '{doctitle}'
+  height: 0.75in
+running_content:
+  start_at: 1
+page:
+  margin: [0.75in, 1in, 0.75in, 1in]

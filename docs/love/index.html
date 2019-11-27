@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Sui Sin Far">
+<title>A Love Story from the Rice Fields of China</title>
+<style>
+/* Modified from https://github.com/edwardtufte/tufte-css */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("https://edwardtufte.github.io/tufte-css/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tufte CSS styles */
+html {
+    font-size: 15px; 
+}
+
+body {
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12.5%;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background-color: #fffff8;
+    color: #111;
+    max-width: 1400px;
+    counter-reset: sidenote-counter; 
+}
+
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1; 
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1; 
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1; 
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1; 
+}
+
+.numeral {
+    font-family: et-book-roman-old-style; 
+}
+
+.danger {
+    color: red; 
+}
+
+article {
+    padding: 5rem 0rem; 
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+
+p,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem; 
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline; 
+}
+
+/* Chapter Epigraphs */
+div.epigraph {
+    margin: 5em 0; 
+}
+
+div.epigraph > blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em; 
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+    font-style: italic; 
+}
+
+div.epigraph > blockquote > footer {
+    font-style: normal; 
+}
+
+div.epigraph > blockquote > footer > cite {
+    font-style: italic; 
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+    font-size: 1.4rem; 
+}
+
+blockquote p {
+    width: 55%;
+    margin-right: 40px; 
+}
+
+blockquote footer {
+    width: 55%;
+    font-size: 1.1rem;
+    text-align: right; 
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 55%; 
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > ol,
+section > ul {
+    width: 50%;
+    -webkit-padding-start: 5%; 
+}
+
+li:not(:first-child) {
+    margin-top: 0.25rem; 
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0; 
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%; 
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%; 
+}
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+    color: inherit; 
+}
+
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+}
+
+a:link, .tufte-underline, .hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+    background-position: 0% 93%, 100% 93%, 0% 93%; 
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    a:link, .tufte-underline, .hover-tufte-underline:hover {
+        background-position-y: 87%, 87%, 87%;
+    }
+}
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%; 
+}
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative; 
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter; 
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: et-book-roman-old-style;
+    position: relative;
+    vertical-align: baseline; 
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem; 
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 1rem;
+    top: -0.5rem; 
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left; 
+}
+
+div.fullwidth,
+table.fullwidth {
+    width: 100%; 
+}
+
+div.table-wrapper {
+    overflow-x: auto;
+    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; 
+}
+
+.sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing: .03em; 
+}
+
+code, pre > code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.0rem;
+    line-height: 1.42;
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+}
+
+.sans > code {
+    font-size: 1.2rem; 
+}
+
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em; 
+}
+
+.marginnote > code,
+.sidenote > code {
+    font-size: 1rem; 
+}
+
+pre > code {
+    font-size: 0.9rem;
+    width: 52.5%;
+    margin-left: 2.5%;
+    overflow-x: auto;
+    display: block;
+}
+
+pre.fullwidth > code {
+    width: 90%; 
+}
+
+.fullwidth {
+    max-width: 90%;
+    clear:both; 
+}
+
+span.newthought {
+    font-variant: small-caps;
+    font-size: 1.2em; 
+}
+
+input.margin-toggle {
+    display: none; 
+}
+
+label.sidenote-number {
+    display: inline; 
+}
+
+label.margin-toggle:not(.sidenote-number) {
+    display: none; 
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0; 
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+@media (max-width: 760px) {
+    body {
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%; 
+    }
+    
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%; 
+    }
+    
+    pre > code {
+        width: 97%; 
+    }
+
+    section > ol {
+        width: 90%; 
+    }
+
+    section > ul {
+        width: 90%; 
+    }
+
+    figure {
+        max-width: 90%; 
+    }
+    
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none; 
+    }
+    
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em; 
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%; 
+    }
+    
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline; 
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none; 
+    }
+    
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative; 
+    }
+
+    label {
+        cursor: pointer; 
+    }
+
+    div.table-wrapper,
+    table {
+        width: 85%; 
+    }
+    
+    img {
+        width: 100%;
+    } 
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>A Love Story from the Rice Fields of China</h1>
+<div class="details">
+<span id="author" class="author">Sui Sin Far</span><br>
+</div>
+</div>
+<div id="content">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+
+  .imageblock > .title {
+    text-align: inherit;
+  }
+  .details {
+    padding-bottom: 1.5em;
+  }
+  .publication-source {
+    color: #686868;
+  }
+  .author {
+    font-variant: small-caps;
+    font-size: 1.2em;
+  }
+  .py {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1rem;
+  }
+  .zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.9rem;
+  }
+  p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
+
+  hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 2em;
+    padding: 0;
+  }
+
+  .verseblock pre {
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    white-space: pre-wrap;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 760px) {
+    p, footer { width: 90%; }
+    pre.code { width: 87.5%; }
+    ul { width: 85%; }
+    .verseblock pre { max-width: 100% }
+    figure { max-width: 90%; }
+    figcaption, figure.fullwidth figcaption {
+      margin-right: 0%;
+      max-width: none;
+    }
+    blockquote p, blockquote footer { width: 90%; }
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+</style>
+<div class="paragraph">
+<p>Chow Ming, the husband of Ah Sue was an Americanized Chinese, so when Christmas day came, he gave a big dinner, to which he invited both his American and Chinese friends, and also one friend who was both Chinese and American.</p>
+</div>
+<div class="paragraph">
+<p>The large room in which he gave the dinner presented quite a striking appearance on the festive evening, being decorated with Chinese flags and banners, algebraic scrolls, incense burners and tropical plants; and the company sat down to a real feast. Chow Ming’s cook had a reputation.</p>
+</div>
+<div class="paragraph">
+<p>Ah Ming and Ah Oi, Chow Ming’s little son and daughter, flitted around like young humming birds in their bright garments. Their arms and necks were hung with charms and amulets given to them by their father’s friends and they kept up an incessant twittering between themselves. They were not allowed, however, to sit down with their elders and ate in an ante room of rice and broiled preserved chicken – a sweet dish, the morsels of chicken being prepared so as to resemble raisins.</p>
+</div>
+<div class="paragraph">
+<p>Chinese do not indulge in conversation during meal time; but when dinner was over and a couple of Chinese violinists had made their debut, the host brought forward several of his compatriots whom he introduced as men whose imaginations and experiences enabled them to relate the achievements of heroes, the despair of lovers, the blessings which fall to the lot of the filial and the terrible fate of the undutiful. Themes were varied; but those which were most appreciated were stories which treated of magic and enchantment.</p>
+</div>
+<div class="paragraph">
+<p>“Come away,” said Ah Sue to me. – We two were the only women present. – “I want to tell you a story, a real true love story – Chinese.”</p>
+</div>
+<div class="paragraph">
+<p>“Really,” I exclaimed delightedly.</p>
+</div>
+<div class="paragraph">
+<p>“Really,” echoed Ah Sue, “the love story of me.”</p>
+</div>
+<div class="paragraph">
+<p>When we were snugly ensconced in her own little room, Ah Sue began:</p>
+</div>
+<div class="paragraph">
+<p>“My father,” said she, “was a big rice farmer. He owned many, many rice fields, but he had no son – just me.”</p>
+</div>
+<div class="paragraph">
+<p>“Chow Han worked for my father. The first time I saw Chow Han was at the Harvest Moon festival. I wore a veil of strings of pearls over my forehead. But his eyes saw beneath the pearls and I was very much ashamed.”</p>
+</div>
+<div class="paragraph">
+<p>“Why were you ashamed? You must have looked very charming.”</p>
+</div>
+<div class="paragraph">
+<p>Ah Sue smiled. She was a pretty little woman.</p>
+</div>
+<div class="paragraph">
+<p>“I was not ashamed of my veil,” said she, “I was ashamed because I perceived that Chow Han knew that I glanced his way.</p>
+</div>
+<div class="paragraph">
+<p>“The next day I and my mother sat on the hill under big parasols and watched the men, sickle in hand, wading through the rice fields, cutting down the grain. It is a pretty sight, the reaping of the rice.</p>
+</div>
+<div class="paragraph">
+<p>“Chow Han drove the laden buffaloes. He was bigger and stronger than any of the other lads. My mother did not stay by me all the time. There were the maid’s tasks to be set. Chow Han drove past when my mother was not beside me and threw at my feet a pretty shell. ‘A pearl for a pearl,’ he cried, and laughed saucily. I did not look at him, but when he had passed out of sight I slipped the shell up my sleeve.</p>
+</div>
+<div class="paragraph">
+<p>“It was a long time before I again saw the lad. My mother fell sick and I accompanied her to the City of Canton to see an American doctor in an American hospital. We remained in Canton, in the house of my brother-in-law for many months. I saw much that was new to my eyes and the sister of the American doctor taught me to speak English – and some other things.</p>
+</div>
+<div class="paragraph">
+<p>“By the spring of the year my mother was much improved in health, and we returned home to celebrate the Spring Festival. The Chinese people are very merry at the time of the springing of the rice. The fields are covered with green, and the rice flower peeps out at the side of the little green blade, so small, so white and so sweet. One afternoon I was following alone a stream in the woods behind my father’s house, when I saw Chow Han coming toward me.”</p>
+</div>
+<div class="paragraph">
+<p>Ah Sue paused. For all her years in America she was a Chinese woman.</p>
+</div>
+<div class="paragraph">
+<p>“And he welcomed you home,” I suggested.</p>
+</div>
+<div class="paragraph">
+<p>Ah Sue nodded her head.</p>
+</div>
+<div class="paragraph">
+<p>“And like a Chinese girl you ran away from the wicked man.”</p>
+</div>
+<div class="paragraph">
+<p>Ah Sue’s eyes glistened mischievously.</p>
+</div>
+<div class="paragraph">
+<p>“You forget, Sui Sin Far,” said she, “that I had been living in Canton and had much talk with an American woman. No, when Chow Han told me that he had much respectful love in his heart for me, I laughed a little laugh, I was so glad – too glad for words. Had not his face been ever before me since the day he tossed me the shell?</p>
+</div>
+<div class="paragraph">
+<p>“But my father was rich and Chow Han was poor.</p>
+</div>
+<div class="paragraph">
+<p>“When the little white flowers had once more withdrawn into the green blades and were transforming themselves into little white grains of rice, there came to the rice country a cousin of Chow Han’s who had been living for some years in America. He talked much with Chow Han, and one day Chow Han came to me and said:</p>
+</div>
+<div class="paragraph">
+<p>“‘I am bound for the land beyond the sea; but in a few years I will return with a fortune big enough to please your father. Wait for me!’</p>
+</div>
+<div class="paragraph">
+<p>“I did not answer him; I could not.</p>
+</div>
+<div class="paragraph">
+<p>“‘Promise that you will ever remember me,’ said Chow Han.</p>
+</div>
+<div class="paragraph">
+<p>“‘You need no primrose,’ I returned. Chow Han set down the pot of fragrant leafed geranium which he had brought with him as a parting gift.</p>
+</div>
+<div class="paragraph">
+<p>“‘As for me,’ said he, ‘even if I should die, my spirit will fly to this plant and keep ever beside you.’</p>
+</div>
+<div class="paragraph">
+<p>“So Chow Han went away to the land beyond the sea.”</p>
+</div>
+<div class="paragraph">
+<p>Ah Sue’s eyes wandered to the distant water, which like a sheet of silver, reflected every light and color of the sky.</p>
+</div>
+<div class="paragraph">
+<p>“Moons rose and waned. I know not how, but through some misfortune, my father lost his money and his rice farms passed into other hands. I loved my poor old father and would have done much to ease his mind; but there was one thing I would not do, and that was marry the man to whom he had betrothed me. Had not the American woman told me that even if one cannot marry the man one loves, it is happier to be true to him than to wed another, and had not the American woman, because she followed her conscience, eyes full of sunshine?</p>
+</div>
+<div class="paragraph">
+<p>“My father died and my mother and I went to live with my brother-in-law in the city of Canton. Two days before we left our old home, we learned that Chow Han had passed away in a railway accident in the United States of America.</p>
+</div>
+<div class="paragraph">
+<p>“My mother’s sister and brother-in-law urged my mother to marry me to some good man, but believing that Chow Han’s spirit was ever now beside me, I determined to remain single as the American woman. Was she not brighter and happier than many of my married relations?</p>
+</div>
+<div class="paragraph">
+<p>“Meanwhile the geranium flower throve in loveliness and fragrance, and in my saddest moments I turned to it for peace and comfort. 
+“One evening, my poor old mother fell asleep and never woke again. I was so sad. My mother’s sister did not love me, and my brother-in-law told me he could no longer support me and that I must marry. There were three good men to be had and I must make up my mind which it should be.</p>
+</div>
+<div class="paragraph">
+<p>“What would I do? What should I do? I bent over my geranium flower and whispered: ‘Tell me, O dear spirit, shall I seek the river?’ And I seemed to hear this message: ‘No, no, be brave as the American woman!’</p>
+</div>
+<div class="paragraph">
+<p>“Ah, the American woman! She showed me a way to live. With her assistance I started a small florist shop. My mother had always loved flowers, and behind our house had kept a plot of ground, cram full of color, which I had tended for her ever since I was a child. So the care of flowers was no new task for me, and I made a good living, and if I were sad at times, yet, for the most part, my heart was serene.</p>
+</div>
+<div class="paragraph">
+<p>“Many who came to me wished to buy the geranium plant, which was now very large and beautiful; but to none would I sell. What! barter the spirit of Chow Han!</p>
+</div>
+<div class="paragraph">
+<p>“On New Year’s day a stranger came into my shop. His hat partly concealed his face; but I could see that he was of our country, though he wore the dress of the foreigner and no queue.</p>
+</div>
+<div class="paragraph">
+<p>“‘What is the price of the large geranium at your door?’ he enquired, and he told me that its fragrance had stolen to him as he passed by.</p>
+</div>
+<div class="paragraph">
+<p>“‘There is no price on that flower,’ I replied, ‘it is there to be seen, but not to be sold.’</p>
+</div>
+<div class="paragraph">
+<p>“‘Not to be sold! But if I give you a high price?’</p>
+</div>
+<div class="paragraph">
+<p>“‘Not for any price,’ I answered.</p>
+</div>
+<div class="paragraph">
+<p>“He sought to persuade me to tell him why, but all I would say was that he could not have the flower.</p>
+</div>
+<div class="paragraph">
+<p>“At last he came close up to me and said:</p>
+</div>
+<div class="paragraph">
+<p>“‘There is another flower that I desire, and you will not say me nay when I put forth my hand to take it.’</p>
+</div>
+<div class="paragraph">
+<p>“I started back in alarm.</p>
+</div>
+<div class="paragraph">
+<p>“‘You will not sell the geranium flower,’ he told me, ‘because you believe that the spirit of Chow Han resides within it. But ‘tis not so. The spirit of Chow Han resides within Chow Han. Behold him!’</p>
+</div>
+<div class="paragraph">
+<p>“He lifted his hat. It was Chow Han.”</p>
+</div>
+<div class="paragraph">
+<p>Ah Sue looked up as her husband entered the room bearing on his shoulder their little Han.</p>
+</div>
+<div class="paragraph">
+<p>“And you named your boy after your old sweetheart,” I observed.</p>
+</div>
+<div class="paragraph">
+<p>“Yes,” replied Ah Sue, “my old sweetheart. But know this, Sin Far, the Chinese men change their name on the day they marry, and the Chow Han, who gave me the scented leafed geranium, and after many moons, found me through its fragrance, is also my husband, Chow Ming.”</p>
+</div>
+<div class="paragraph publication-source">
+<p>— December 1911. <em>New England Magazine</em>, Vol. 45, pp. 343–345.</p>
+</div>
+</div>
+</body>
+</html>

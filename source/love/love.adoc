@@ -1,0 +1,122 @@
+= A Love Story from the Rice Fields of China
+Sui Sin Far
+:date: December 1911
+:publication: New England Magazine
+:volumenum: Vol. 45
+:pages: 343–345
+:figure-caption!:
+:stylesheet: ../../styles/tufte.css
+:nofooter:
+
+include::../../styles/css.adoc[]
+include::../../notes/notes.adoc[]
+
+Chow Ming, the husband of Ah Sue was an Americanized Chinese, so when Christmas day came, he gave a big dinner, to which he invited both his American and Chinese friends, and also one friend who was both Chinese and American.
+
+The large room in which he gave the dinner presented quite a striking appearance on the festive evening, being decorated with Chinese flags and banners, algebraic scrolls, incense burners and tropical plants; and the company sat down to a real feast. Chow Ming's cook had a reputation.
+
+Ah Ming and Ah Oi, Chow Ming's little son and daughter, flitted around like young humming birds in their bright garments. Their arms and necks were hung with charms and amulets given to them by their father's friends and they kept up an incessant twittering between themselves. They were not allowed, however, to sit down with their elders and ate in an ante room of rice and broiled preserved chicken -- a sweet dish, the morsels of chicken being prepared so as to resemble raisins.
+
+Chinese do not indulge in conversation during meal time; but when dinner was over and a couple of Chinese violinists had made their debut, the host brought forward several of his compatriots whom he introduced as men whose imaginations and experiences enabled them to relate the achievements of heroes, the despair of lovers, the blessings which fall to the lot of the filial and the terrible fate of the undutiful. Themes were varied; but those which were most appreciated were stories which treated of magic and enchantment.
+
+"Come away," said Ah Sue to me. -- We two were the only women present. -- "I want to tell you a story, a real true love story -- Chinese."
+
+"Really," I exclaimed delightedly.
+
+"Really," echoed Ah Sue, "the love story of me."
+
+When we were snugly ensconced in her own little room, Ah Sue began:
+
+"My father," said she, "was a big rice farmer. He owned many, many rice fields, but he had no son -- just me."
+
+"Chow Han worked for my father. The first time I saw Chow Han was at the Harvest Moon festival. I wore a veil of strings of pearls over my forehead. But his eyes saw beneath the pearls and I was very much ashamed."
+
+"Why were you ashamed? You must have looked very charming."
+
+Ah Sue smiled. She was a pretty little woman.
+
+"I was not ashamed of my veil," said she, "I was ashamed because I perceived that Chow Han knew that I glanced his way.
+
+"The next day I and my mother sat on the hill under big parasols and watched the men, sickle in hand, wading through the rice fields, cutting down the grain. It is a pretty sight, the reaping of the rice.
+
+"Chow Han drove the laden buffaloes. He was bigger and stronger than any of the other lads. My mother did not stay by me all the time. There were the maid's tasks to be set. Chow Han drove past when my mother was not beside me and threw at my feet a pretty shell. 'A pearl for a pearl,' he cried, and laughed saucily. I did not look at him, but when he had passed out of sight I slipped the shell up my sleeve.
+
+"It was a long time before I again saw the lad. My mother fell sick and I accompanied her to the City of Canton to see an American doctor in an American hospital. We remained in Canton, in the house of my brother-in-law for many months. I saw much that was new to my eyes and the sister of the American doctor taught me to speak English -- and some other things.
+
+"By the spring of the year my mother was much improved in health, and we returned home to celebrate the Spring Festival. The Chinese people are very merry at the time of the springing of the rice. The fields are covered with green, and the rice flower peeps out at the side of the little green blade, so small, so white and so sweet. One afternoon I was following alone a stream in the woods behind my father's house, when I saw Chow Han coming toward me."
+
+Ah Sue paused. For all her years in America she was a Chinese woman.
+
+"And he welcomed you home," I suggested.
+
+Ah Sue nodded her head.
+
+"And like a Chinese girl you ran away from the wicked man."
+
+Ah Sue's eyes glistened mischievously.
+
+"You forget, Sui Sin Far," said she, "that I had been living in Canton and had much talk with an American woman. No, when Chow Han told me that he had much respectful love in his heart for me, I laughed a little laugh, I was so glad -- too glad for words. Had not his face been ever before me since the day he tossed me the shell?
+
+"But my father was rich and Chow Han was poor.
+
+"When the little white flowers had once more withdrawn into the green blades and were transforming themselves into little white grains of rice, there came to the rice country a cousin of Chow Han's who had been living for some years in America. He talked much with Chow Han, and one day Chow Han came to me and said:
+
+"'I am bound for the land beyond the sea; but in a few years I will return with a fortune big enough to please your father. Wait for me!'
+
+"I did not answer him; I could not.
+
+"'Promise that you will ever remember me,' said Chow Han.
+
+"'You need no primrose,' I returned. Chow Han set down the pot of fragrant leafed geranium which he had brought with him as a parting gift.
+
+"'As for me,' said he, 'even if I should die, my spirit will fly to this plant and keep ever beside you.'
+
+"So Chow Han went away to the land beyond the sea."
+
+Ah Sue's eyes wandered to the distant water, which like a sheet of silver, reflected every light and color of the sky.
+
+"Moons rose and waned. I know not how, but through some misfortune, my father lost his money and his rice farms passed into other hands. I loved my poor old father and would have done much to ease his mind; but there was one thing I would not do, and that was marry the man to whom he had betrothed me. Had not the American woman told me that even if one cannot marry the man one loves, it is happier to be true to him than to wed another, and had not the American woman, because she followed her conscience, eyes full of sunshine?
+
+"My father died and my mother and I went to live with my brother-in-law in the city of Canton. Two days before we left our old home, we learned that Chow Han had passed away in a railway accident in the United States of America.
+
+"My mother's sister and brother-in-law urged my mother to marry me to some good man, but believing that Chow Han's spirit was ever now beside me, I determined to remain single as the American woman. Was she not brighter and happier than many of my married relations?
+
+"Meanwhile the geranium flower throve in loveliness and fragrance, and in my saddest moments I turned to it for peace and comfort. 
+"One evening, my poor old mother fell asleep and never woke again. I was so sad. My mother's sister did not love me, and my brother-in-law told me he could no longer support me and that I must marry. There were three good men to be had and I must make up my mind which it should be.
+
+"What would I do? What should I do? I bent over my geranium flower and whispered: 'Tell me, O dear spirit, shall I seek the river?' And I seemed to hear this message: 'No, no, be brave as the American woman!'
+
+"Ah, the American woman! She showed me a way to live. With her assistance I started a small florist shop. My mother had always loved flowers, and behind our house had kept a plot of ground, cram full of color, which I had tended for her ever since I was a child. So the care of flowers was no new task for me, and I made a good living, and if I were sad at times, yet, for the most part, my heart was serene.
+
+"Many who came to me wished to buy the geranium plant, which was now very large and beautiful; but to none would I sell. What! barter the spirit of Chow Han!
+
+"On New Year's day a stranger came into my shop. His hat partly concealed his face; but I could see that he was of our country, though he wore the dress of the foreigner and no queue.
+
+"'What is the price of the large geranium at your door?' he enquired, and he told me that its fragrance had stolen to him as he passed by.
+
+"'There is no price on that flower,' I replied, 'it is there to be seen, but not to be sold.'
+
+"'Not to be sold! But if I give you a high price?'
+
+"'Not for any price,' I answered.
+
+"He sought to persuade me to tell him why, but all I would say was that he could not have the flower.
+
+"At last he came close up to me and said:
+
+"'There is another flower that I desire, and you will not say me nay when I put forth my hand to take it.'
+
+"I started back in alarm.
+
+"'You will not sell the geranium flower,' he told me, 'because you believe that the spirit of Chow Han resides within it. But 'tis not so. The spirit of Chow Han resides within Chow Han. Behold him!'
+
+"He lifted his hat. It was Chow Han."
+
+Ah Sue looked up as her husband entered the room bearing on his shoulder their little Han.
+
+"And you named your boy after your old sweetheart," I observed.
+
+"Yes," replied Ah Sue, "my old sweetheart. But know this, Sin Far, the Chinese men change their name on the day they marry, and the Chow Han, who gave me the scented leafed geranium, and after many moons, found me through its fragrance, is also my husband, Chow Ming."
+
+[.publication-source]
+— {date}. _{publication}_, {volumenum}, pp. {pages}.
