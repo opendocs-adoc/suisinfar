@@ -95,14 +95,25 @@ def generate_pdf(id, source_path)
 end
 
 def clean_up_files
-  File.delete(@html_out_adoc)
-  File.delete(@pdf_out_adoc)
-  File.delete(@epub_file_base + "-cover.png")
-  File.delete(@epub_file_base + "-cover.svg")
-  File.delete(@epub_file_base + ".adoc")
-  File.delete(@epub_file_base + "-content.adoc")
+  temp_files = [
+    @html_out_adoc,
+    @pdf_out_adoc,
+    @epub_file_base + "-cover.png",
+    @epub_file_base + "-cover.svg",
+    @epub_file_base + ".adoc",
+    @epub_file_base + "-content.adoc"
+  ]
 
-  FileUtils.mv(@epub_file_base + ".epub", @epub_file_base.gsub(/\-epub/, "") + ".epub")
+  temp_files.each do |t|
+    if t && File.exist?(t)
+      File.delete(t)
+    end
+  end
+
+  epub_name = @epub_file_base + ".epub"
+  if File.exist?(epub_name)
+    FileUtils.mv(@epub_file_base + ".epub", @epub_file_base.gsub(/\-epub/, "") + ".epub")
+  end
 end
 
 def copy_images(id, target_dir)
