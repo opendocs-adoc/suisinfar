@@ -131,7 +131,7 @@ def generate_booklet(target_dir, id)
 end
 
 def generate_epub(source_path, id)
-  source_adoc = File.read(source_path + id + ".adoc")
+  source_adoc = smart_quotes(source_path + id + ".adoc")
   spine_filename = @output_dir + id + "-epub.adoc"
   content_filename = @output_dir + id + "-epub-content.adoc"
   /\A= (?<title>.*?)\n(?<author>.*?)\n(?<attributes>.*:nofooter:\n)/m =~ source_adoc
