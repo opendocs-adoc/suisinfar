@@ -99,7 +99,8 @@ def clean_up_files
     @epub_file_base + "-cover.png",
     @epub_file_base + "-cover.svg",
     @epub_file_base + ".adoc",
-    @epub_file_base + "-content.adoc"
+    @epub_file_base + "-content.adoc",
+    @epub_file_base + "-kf8.epub"
   ]
 
   temp_files.each do |t|
@@ -151,6 +152,7 @@ def generate_epub(source_path, id)
   File.open(content_filename, "w") {|f| f << content_out }
   epub_basename = File.basename(spine_filename)
   `cd #{@output_dir}; asciidoctor-epub3 #{epub_basename}`
+  `cd #{@output_dir}; asciidoctor-epub3 -a ebook-format=kf8  #{epub_basename}`
 
   @epub_file_base = @output_dir + id + "-epub"
 end
