@@ -109,9 +109,12 @@ def clean_up_files
     end
   end
 
-  epub_name = @epub_file_base + ".epub"
-  if File.exist?(epub_name)
-    FileUtils.mv(@epub_file_base + ".epub", @epub_file_base.gsub(/\-epub/, "") + ".epub")
+  rename_epub = [ ".epub", ".mobi" ]
+  rename_epub.each do |ext|
+    epub_name = @epub_file_base + ext
+    if File.exist?(epub_name)
+      FileUtils.mv(epub_name, @epub_file_base.gsub(/\-epub/, "") + ext)
+    end
   end
 end
 
